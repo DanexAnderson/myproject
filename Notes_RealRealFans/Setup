@@ -23,7 +23,8 @@ Environment Setup:
         1. Create Theme
         2. Configure BootStrap
 
-4) Added Github Version Control
+4) Added Github Version Control : 
+        1. To remove commits from cache => git rm --cached ./* -r
 
 5) Configured Gulp task runner
 
