@@ -1,0 +1,37 @@
+Environment Setup:
+
+1) Installed Docker Containers
+        1. Node
+        2. MySql
+        3. Phpmyadmin 
+        4. MongoDB 
+        5. Wordpress 
+
+        i. Angular Material:=>  ng add @angular/material --save
+
+        ii. sudo ngBootstrap (Ensure file permission):=>  sudo ng add @ng-bootstrap/schematics --save
+
+        iii. change owner:=>   chown -R dane:dane fileName
+
+        iv. change permissions :=> chmod -R 777 fileName
+
+2) Installed Angular and Ionic 
+        1. Create Ionic App 
+        2. Install Material Design
+        
+3) Configured Wordpress
+        1. Create Theme
+        2. Configure BootStrap
+
+4) Added Github Version Control
+
+5) Configured Gulp task runner
+
+6) 
+
+
+
+
+
+
+

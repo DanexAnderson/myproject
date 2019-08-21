@@ -1,26 +1,6 @@
 version: '3.1'
 
 services:
-  app:
-    container_name: app
-    restart: always
-    build:
-      context: .
-      dockerfile: Dockerfile.dev
-    volumes:
-      - ./:/usr/src/app
-      - /usr/src/app/node_modules
-    ports:
-      - "3000:3000"
-    links:
-      - mongo
-  mongo:
-    container_name: mongo
-    image: mongo
-    volumes:
-      - ./data:/data/db
-    ports:
-      - "27020:27017"
   wordpress:
     depends_on:
       - mysql
