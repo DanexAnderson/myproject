@@ -1,11 +1,10 @@
 Environment Setup:
 
 1) Installed Docker Containers
-        1. Node
-        2. MySql
-        3. Phpmyadmin 
-        4. MongoDB 
-        5. Wordpress 
+        
+        1. MySql
+        2. Phpmyadmin 
+        3. Wordpress 
 
         i. Angular Material:=>  ng add @angular/material --save
 
@@ -28,9 +27,28 @@ Environment Setup:
 
 5) Configured Gulp task runner
 
-6) 
+6) Setup Production Server
+        1. ** Nginx and php-FPM **
+        2. ** Install Redis container **
 
 
+7) Create website Frontend pages
+        1. Ionic Home page 
+        2. Wordpress Front-page 
+
+
+8) Create Scrollable label Component 
+        1. Ionic Scrollpane 
+        2. Wordpress blog page
+
+9) View Single page Component
+        1. Ionic Single view item Component
+        2. Wordpress Single page
+
+10) User Accounts and Authentication
+
+        1. Signup and Login 
+        2. Add Display Image 
 
 
 
