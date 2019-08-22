@@ -1,15 +1,7 @@
 ionic conference app
 realrealfans/node_modules
 realrealfans/package-lock.json
-
 backend/*
-backend/node_modules
-backend/package-lock.json
-backend/wp-content/themes/*
-backend/wp-content/themes/realrealfans
-backend/wp-content/gulp/node_modules
-backend/wp-content/gulp/package-lock.json
-
 serverwordpress/wordpress/wp-content/themes/*
 !serverwordpress/wordpress/wp-content/themes/realrealfans
 serverwordpress/wordpress/wp-content/gulp/node_modules
