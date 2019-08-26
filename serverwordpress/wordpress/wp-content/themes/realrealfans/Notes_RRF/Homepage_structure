@@ -1,0 +1,27 @@
+Post Data Categories:
+
+Sports:
+        1. Football 
+        2. Baseketball
+        3. American Football
+        4. Other Sports
+
+Entertainment:
+
+        1. Music 
+        2. Series
+        3. Movies 
+        4. Anime  
+
+
+
+
+Technology
+
+        1. New releases 
+        2. Software downloads
+        3. Tech Fix 
+        4. Q & A
+
+
+Change Categories style in class-wp-widget-Categories.php.. 

@@ -1,5 +1,5 @@
 exports.themeLocation = './../themes/realrealfans/';
-exports.urlToPreview = 'http://localhost:8001/';
+exports.urlToPreview = 'http://localhost:8080/';
 
 // exports.themeLocation = './app/wp-content/themes/fictional-university-theme/';
 // exports.urlToPreview = 'http://fictional-university.test';
