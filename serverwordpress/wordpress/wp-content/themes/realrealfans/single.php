@@ -15,9 +15,9 @@
 									<div class="row">					
 										<div class="col-md-12">
 											<h2>
-												<a href="<?php echo the_permalink(); ?>">
+												<span href="<?php // echo the_permalink(); ?>">
 													<?php echo the_title(); ?>
-												</a>
+												</span>
 											</h2>
 
 											<!-- Check For Thumbnail -->
@@ -41,9 +41,11 @@
 												
 											</div>
 									</div>
+
 								</article>
 							<?php endwhile; ?>
 						<?php endif; ?>
+						<?php comments_template(); ?>
 					</div>
 				</div>
 			</div>

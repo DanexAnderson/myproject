@@ -2,7 +2,7 @@
 <?php wp_head(); get_header(); ?>
 <!--  -->
 
-<div class="container-fluid index ">
+<div class=" index ">
 		<div class="row">
 			<div class="col-md-8">
 				<div class="panel panel-default">
