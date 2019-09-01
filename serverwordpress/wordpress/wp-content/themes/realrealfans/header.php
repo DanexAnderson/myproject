@@ -58,11 +58,14 @@
 
     <label for="navbar-search" class="sr-only"><?php _e('Search', 'textdomain'); ?></label>
 	       <div class="form-group">
-	       		<input type="text" class="form-control mr-sm-2 mr-lg-1" name="s" placeholder="Search" id="navbar-search">
+             <input type="text" class="form-control mr-sm-2 mr-lg-1 " name="s" placeholder="Search"
+             onkeyup="showResult(this.value)" id="navbar-search">
+             
          </div>
-         <button type="submit" class="btn btn-outline-primary my-2 my-sm-0"><?php _e('Search', 'textdomain'); ?></button>
-    <!--   <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
+         
+         <button type="submit" class="btn btn-outline-primary my-2 my-sm-0 "><?php _e('Search', 'textdomain'); ?></button>
+        
+      <ul class="list-group position-absolute w-25 h-100 marginTop" id="livesearch"></ul>
     </form>
   </div>
 </nav>

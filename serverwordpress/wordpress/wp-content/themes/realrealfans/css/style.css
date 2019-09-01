@@ -35,3 +35,7 @@ article.post .meta{
 .comment-item{
 	overflow:auto;
 }
+
+.marginTop {
+	margin-top: 4%;
+}

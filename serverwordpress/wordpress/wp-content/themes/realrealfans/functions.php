@@ -4,6 +4,7 @@ require_once('widgets/class-wp-widget-recent-comments.php');
 require_once('widgets/class-wp-widget-categories.php');
 
 require_once('class-wp-bootstrap-navwalker.php');
+require get_theme_file_path('liveSearch.php');
 
 function load_styleCSS()
 {
@@ -43,7 +44,10 @@ function load_JS()
     wp_enqueue_script( 'bootstrap_js' );
 
     wp_register_script('custom_js', get_template_directory_uri() . '/js/custom.js', '', 1, true );
-    wp_enqueue_script( 'custom_js' );
+	wp_enqueue_script( 'custom_js' );
+	
+    wp_register_script('liveSearch_js', get_template_directory_uri() . '/js/liveSearch.js', '', 1, true );
+    wp_enqueue_script( 'liveSearch_js' );
 
 }
 
