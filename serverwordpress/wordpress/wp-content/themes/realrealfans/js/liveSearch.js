@@ -18,13 +18,14 @@ function showResult(str) {
       if (this.readyState==4 && this.status==200 ) {
         
         if(this.responseText.trim() !='null') {
-             //alert(this.responseText);
-        document.getElementById("livesearch").innerHTML=this.responseText;
+        
+        var response = this.responseText.substr(0, this.responseText.length-4);
+        document.getElementById("livesearch").innerHTML= response;
         document.getElementById("livesearch").style.border="0px solid #A5ACB2";
     }
       }
     }
     xmlhttp.open("GET","/wp-json/rrf/v1/search?q="+str,true);
-    xmlhttp.send(null);
+    xmlhttp.send();
   }
 

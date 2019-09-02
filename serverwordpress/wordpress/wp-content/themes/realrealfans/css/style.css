@@ -36,6 +36,17 @@ article.post .meta{
 	overflow:auto;
 }
 
-.marginTop {
-	margin-top: 4%;
+.marginTop { /* Search DropDown */
+	margin-top: 48px;
+	
+	min-width: 25%;
+	
 }
+
+.searchSVG {
+
+	background: url('../SVG/search-solid.svg');
+	background-repeat: no-repeat;
+	height: 25px;
+} 
+

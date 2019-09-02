@@ -6,40 +6,25 @@
     <?php wp_head(); ?>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top ">
-<a class="navbar-brand ml-lg-1 mr-lg-2" href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
+<nav class="navbar navbar-expand-md navbar-light bg-transparent fixed-top py-1">
+<a class="navbar-brand ml-lg-4"  href="<?php bloginfo('url'); ?>"> <?php bloginfo('name'); ?></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <!--------------- Wordpress Menu ---------------------->
-
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-<div class="ml-lg-5">
-  <?php
-	            wp_nav_menu( array(
-	                'theme_location'    => 'primary',
-	                'depth'             => 2,
-	                'container'         => false,            
-	                'menu_class'        => 'nav navbar-nav',
-	                'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
-	                'walker'            => new wp_bootstrap_navwalker())
-	            );
-          ?>
 
-</div>
-   <!-- ------------------------------------------------------------------------------ -->
-
-<!--     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+   <ul class="navbar-nav  ml-auto">
+      <li class="nav-item active ">
+        <a class="nav-link" href="#">Sports <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+      <li class="nav-item active ml-md-1 ml-lg-4">
+        <a class="nav-link" href="#">Entertainment</a>
       </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
+      <li class="nav-item active dropdown ml-md-1 ml-lg-4">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Technology
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="#">Action</a>
@@ -49,23 +34,24 @@
         </div>
       </li>
  
-    </ul> -->
+    </ul> 
 
 <!-------------------------- Search Bar ------------------------------->
 
-    <form method="get" class="form-inline my-2 my-lg-0 ml-auto mr-lg-auto" role="search" 
+    <form method="get" class="form-inline my-2 my-lg-0 ml-auto mr-lg-auto "  role="search" 
     action="<?php echo esc_url(home_url('/')); ?>">
 
     <label for="navbar-search" class="sr-only"><?php _e('Search', 'textdomain'); ?></label>
 	       <div class="form-group">
-             <input type="text" class="form-control mr-sm-2 mr-lg-1 " name="s" placeholder="Search"
+             <input type="text"  class="form-control mr-sm-2 mr-lg-1" name="s"  placeholder="Search"
              onkeyup="showResult(this.value)" id="navbar-search">
              
          </div>
          
-         <button type="submit" class="btn btn-outline-primary my-2 my-sm-0 "><?php _e('Search', 'textdomain'); ?></button>
+         <button type="submit" class="btn btn-outline-light my-0 my-sm-0 searchSVG">
+           <?php// _e('Search', 'textdomain'); ?></button>
         
-      <ul class="list-group position-absolute w-25 h-100 marginTop" id="livesearch"></ul>
+      <ul class="list-group position-absolute  h-100 marginTop" id="livesearch"></ul>
     </form>
   </div>
 </nav>
