@@ -33,10 +33,12 @@ $gallery_args = array(
 	'rewrite' => true,
 	'hierarchical' => false,
 	'has_archive' => true,
+	'exclude_from_search' => true,
 	'menu_position' => null,
 	'capability_type' => 'post',
 	'supports' => array('title', 'excerpt', 'editor', 'thumbnail'),
-	'menu_icon' => get_bloginfo('template_directory') . '/images/photo-album.png' //16x16 png if you want an icon
+	//'menu_icon' => get_bloginfo('template_directory') . '/images/icons/photo-album.png' //16x16 png if you want an icon
+	'menu_icon' =>  'dashicons-format-image'
 ); 
 register_post_type('gallery', $gallery_args);
 

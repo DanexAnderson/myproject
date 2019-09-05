@@ -49,9 +49,23 @@ while($mainQuery->have_posts()) {
 }
 return ;
 }
-
-
 add_action('rest_api_init', 'registerSearch');
 
 
+// To Exclude a Post from Search
+function wpb_search_filter( $query ) {
+  if ( $query->is_search  )  // && !is_admin()
+  $query->set( 'cat','-23' ); // remove search results for a category with cat_ID = 23
+   
+  return $query;
+  }
+  add_filter( 'pre_get_posts', 'wpb_search_filter' );
+
+// To Exclude all Pages from Search
+  add_filter('register_post_type_args', function($args, $post_type) { 
+    if ( $post_type == 'page') {
+    $args['exclude_from_search'] = true;
+    }
+    return $args;
+    }, 10, 2);
  
