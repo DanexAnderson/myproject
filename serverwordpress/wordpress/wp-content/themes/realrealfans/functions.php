@@ -1,6 +1,7 @@
 <?php
 
-require_once('liveSearch.php');
+require_once('inc/gallery.php');
+require_once('inc/livesearch.php');
 
 function load_styleCSS()
 {
@@ -17,7 +18,7 @@ function load_styleCSS()
     wp_enqueue_style( 'CSS_style' );
 }
 
-add_action('wp_enqueue_scripts', 'load_styleCSS');
+add_action('wp_enqueue_scripts', 'load_styleCSS'); 
 
 
 // Jquery Must be load Custom JS and bootstrap JS code
@@ -49,14 +50,20 @@ function load_JS()
 
 add_action('wp_enqueue_scripts', 'load_JS'); 
 
+
+
 //----------------------------------------- --------------------------------------------------------------//
 
 
+
+
+/* 
  function thumbnail_image(){
 
 	// Featured Image Support
 	add_theme_support('post-thumbnails');
 }
-add_action('after_setup_theme', 'thumbnail_image'); 
+add_action('after_setup_theme', 'thumbnail_image');  */
+
 
 ?>

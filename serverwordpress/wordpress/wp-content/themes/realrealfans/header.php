@@ -1,28 +1,32 @@
-<!DOCTYPE html>
 <html <?php language_attributes(); ?> >
+<?php wp_head(); ?>
 <head>
     <meta charset="<?php bloginfo('charset') ?>">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <?php wp_head(); ?>
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
 </head>
-<body>
-<nav class="navbar navbar-expand-md navbar-light bg-transparent fixed-top py-1">
+
+<body> 
+  
+<?php include('slideheader.php'); ?>
+    
+<nav class="navbar navbar-expand-md navbar-light NavbgColor py-md-0 mt-md-n1 mt-lg-0 fixed-top py-lg-1">
 <a class="navbar-brand ml-lg-4"  href="<?php bloginfo('url'); ?>"> <?php bloginfo('name'); ?></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+   aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-   <ul class="navbar-nav  ml-auto">
+   <ul class="navbar-nav  ml-auto ">
       <li class="nav-item active ">
-        <a class="nav-link" href="#">Sports <span class="sr-only">(current)</span></a>
+        <a class="nav-link NavtextColor" href="#">Sports <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active ml-md-1 ml-lg-4">
-        <a class="nav-link" href="#">Entertainment</a>
+        <a class="nav-link NavtextColor" href="#">Entertainment</a>
       </li>
       <li class="nav-item active dropdown ml-md-1 ml-lg-4">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+        <a class="nav-link dropdown-toggle NavtextColor" href="#" id="navbarDropdown" role="button"
          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Technology
         </a>
@@ -48,8 +52,8 @@
              
          </div>
          
-         <button type="submit" class="btn btn-outline-light my-0 my-sm-0 searchSVG">
-           <?php// _e('Search', 'textdomain'); ?></button>
+         <button type="submit" class="btn btn-outline-none my-0 my-sm-0 searchSVG">
+           </button>
         
       <ul class="list-group position-absolute  h-100 marginTop" id="livesearch"></ul>
     </form>

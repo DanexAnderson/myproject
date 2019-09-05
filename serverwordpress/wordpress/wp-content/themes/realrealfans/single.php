@@ -1,6 +1,6 @@
 
+<?php get_header(); ?>
 
-<?php wp_head(); get_header(); ?>
 <!--  -->
 
 <div class="container-fluid index">
@@ -45,17 +45,15 @@
 								</article>
 							<?php endwhile; ?>
 						<?php endif; ?>
-						<?php comments_template(); ?>
+						
 					</div>
 				</div>
 			</div>
 			<div class="col-md-3 ml-auto">
-				<?php if(is_active_sidebar('sidebar')) : ?>
-					<?php dynamic_sidebar('sidebar'); ?>
-				<?php endif; ?>
+				
 			</div>
 		</div>
 	</div>
 	<!-- -->
-<?php get_footer(); wp_footer();?>
+<?php get_footer();?>
 	

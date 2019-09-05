@@ -1,0 +1,11 @@
+[05-Sep-2019 13:05:24 UTC] PHP Recoverable fatal error:  Object of class WP_Query could not be converted to string in /var/www/html/wp-content/themes/realrealfans/single-gallery.php on line 18
+[05-Sep-2019 13:05:25 UTC] PHP Recoverable fatal error:  Object of class WP_Query could not be converted to string in /var/www/html/wp-content/themes/realrealfans/single-gallery.php on line 18
+[05-Sep-2019 13:05:28 UTC] PHP Recoverable fatal error:  Object of class WP_Query could not be converted to string in /var/www/html/wp-content/themes/realrealfans/single-gallery.php on line 18
+[05-Sep-2019 13:05:37 UTC] PHP Recoverable fatal error:  Object of class WP_Query could not be converted to string in /var/www/html/wp-content/themes/realrealfans/single-gallery.php on line 18
+[05-Sep-2019 13:05:38 UTC] PHP Recoverable fatal error:  Object of class WP_Query could not be converted to string in /var/www/html/wp-content/themes/realrealfans/single-gallery.php on line 18
+[05-Sep-2019 13:25:21 UTC] PHP Recoverable fatal error:  Object of class WP_Post could not be converted to string in /var/www/html/wp-content/themes/realrealfans/single-gallery.php on line 20
+[05-Sep-2019 13:25:23 UTC] PHP Recoverable fatal error:  Object of class WP_Post could not be converted to string in /var/www/html/wp-content/themes/realrealfans/single-gallery.php on line 20
+[05-Sep-2019 13:25:43 UTC] PHP Recoverable fatal error:  Object of class WP_Post could not be converted to string in /var/www/html/wp-content/themes/realrealfans/single-gallery.php on line 20
+[05-Sep-2019 13:26:07 UTC] PHP Recoverable fatal error:  Object of class WP_Post could not be converted to string in /var/www/html/wp-content/themes/realrealfans/single-gallery.php on line 20
+[05-Sep-2019 13:26:08 UTC] PHP Recoverable fatal error:  Object of class WP_Post could not be converted to string in /var/www/html/wp-content/themes/realrealfans/single-gallery.php on line 20
+[05-Sep-2019 13:26:08 UTC] PHP Recoverable fatal error:  Object of class WP_Post could not be converted to string in /var/www/html/wp-content/themes/realrealfans/single-gallery.php on line 20

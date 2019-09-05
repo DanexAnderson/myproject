@@ -16,7 +16,7 @@ gulp.task('browser-sync', function() {
     gulp.watch([settings.themeLocation +'**/*.php', settings.themeLocation + 'css/*.css', settings.themeLocation + 'js/*.js' ], function(done) {
         browserSync.reload();  done();
       });
-       
+        
       /* gulp.watch(settings.themeLocation + 'css/*.css');
        gulp.watch([settings.themeLocation + 'js/*.js', settings.themeLocation + 'js/custom.js']); */
     

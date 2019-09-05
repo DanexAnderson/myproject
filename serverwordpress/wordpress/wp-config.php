@@ -37,8 +37,6 @@ define( 'DB_CHARSET', 'utf8');
 /** The Database Collate type. Don't change this if in doubt. */
 define( 'DB_COLLATE', '');
 
-define('FS_METHOD','direct');
-
 /**#@+
  * Authentication Unique Keys and Salts.
  *
@@ -48,14 +46,14 @@ define('FS_METHOD','direct');
  *
  * @since 2.6.0
  */
-define( 'AUTH_KEY',         '0aaee4ce209701783eeab3e02466d09bd9a143f1');
-define( 'SECURE_AUTH_KEY',  '4f602606ee56ca7eb9923d74f2d766efe7971c16');
-define( 'LOGGED_IN_KEY',    '498f46a9dd4d39a596f31857f99c257a57ed71db');
-define( 'NONCE_KEY',        'bb944dda42d9f975411d8824f1c4ace1a2fc47d0');
-define( 'AUTH_SALT',        '8e6fcf749b60a209e12077eeb9ea3b30a1a5bc60');
-define( 'SECURE_AUTH_SALT', '20bbafd77279430983fb7abca5aace77819f9a3c');
-define( 'LOGGED_IN_SALT',   '36339a758ddec4f5c8dc26cbbdd57338d88138d6');
-define( 'NONCE_SALT',       '03cd199da44ae5fe9e7ea54d4ac0771e90a6a8f5');
+define( 'AUTH_KEY',         '85004c1421694882630c8cef476e284c2ff84ef6');
+define( 'SECURE_AUTH_KEY',  '12d33e7e876a9323c0ab4337cb309a74ceac463d');
+define( 'LOGGED_IN_KEY',    '6194931314f40c44f43c5d6faaf39f49b3976ef1');
+define( 'NONCE_KEY',        '2035d25a754a1a5d5138e03e54958eb5cb1a8cae');
+define( 'AUTH_SALT',        'e313ddafebf0c29990f5b2616f476536b25594f0');
+define( 'SECURE_AUTH_SALT', 'e69cc5ff40079934284c66e1c3a225104046a8a5');
+define( 'LOGGED_IN_SALT',   '7e893868a848056d4878676efb01d3d2e5f04e11');
+define( 'NONCE_SALT',       '79d90224f660eb9642e71b400a2af5a60f6ca070');
 
 /**#@-*/
 
@@ -86,6 +84,12 @@ define( 'WP_DEBUG', false );
 if (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https') {
 	$_SERVER['HTTPS'] = 'on';
 }
+
+/*----------------- Dane Error Log ---------------------*/
+
+ini_set('log_errors',TRUE);
+ini_set('error_reporting', E_ALL);
+ini_set('error_log', dirname(__FILE__) . '/error_log.txt');
 
 /* That's all, stop editing! Happy publishing. */
 
