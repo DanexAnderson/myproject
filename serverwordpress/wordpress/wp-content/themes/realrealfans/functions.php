@@ -5,16 +5,18 @@ require_once('inc/livesearch.php');
 
 function load_styleCSS()
 {
+    $rand = rand( 1, 99999999999 ); // To Prevent website from Caching CSS
+
     // Bootstrap CSS Must load before Custom CSS 
-    wp_register_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(),false, 'all' );
+    wp_register_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(),$rand, 'all' );
     wp_enqueue_style( 'bootstrap' );
 
     // Main StyleSheet, Theme Info StyleSheet
-    wp_register_style('style', get_template_directory_uri() . '/style.css', array(),false, 'all' );
+    wp_register_style('style', get_template_directory_uri() . '/style.css', array(),$rand, 'all' );
     wp_enqueue_style( 'style' );
 
     // CSS file Custom StyleSheet
-    wp_register_style('CSS_style', get_template_directory_uri() . '/css/style.css', array(),false, 'all' );
+    wp_register_style('CSS_style', get_template_directory_uri() . '/css/style.css', array(),$rand, 'all' );
     wp_enqueue_style( 'CSS_style' );
 }
 

@@ -1,0 +1,79 @@
+.searchSVG {
+
+	background: url('../SVG/search-solid.svg');
+	background-repeat: no-repeat;
+	height: 25px;
+} 
+.soccerSVG {
+
+	background: url('../SVG/futbol-solid.svg');
+	background-repeat: no-repeat;
+	height: 25px;
+} 
+.footballSVG {
+
+	background: url('../SVG/football-ball-solid.svg');
+	background-repeat: no-repeat;
+	height: 25px;
+} 
+.basketballSVG {
+
+	background: url('../SVG/basketball-ball-solid.svg');
+	background-repeat: no-repeat;
+	height: 25px;
+} 
+.sportsSVG {
+
+	background: url('../SVG/running-solid.svg');
+	background-repeat: no-repeat;
+	height: 25px;
+} 
+.animeSVG {
+
+	background: url('../SVG/anime.svg');
+	background-repeat: no-repeat;
+	height: 25px;
+} 
+.musicSVG {
+
+	background: url('../SVG/music.svg');
+	background-repeat: no-repeat;
+	height: 25px;
+} 
+.movieSVG {
+
+	background: url('../SVG/movie.svg');
+	background-repeat: no-repeat;
+	height: 25px;
+} 
+.tvSVG {
+
+	background: url('../SVG/tv.svg');
+	background-repeat: no-repeat;
+	height: 25px;
+} 
+.fixSVG {
+
+	background: url('../SVG/fix.svg');
+	background-repeat: no-repeat;
+	height: 25px;
+} 
+.qaSVG {
+
+	background: url('../SVG/qa.svg');
+	background-repeat: no-repeat;
+	height: 25px;
+} 
+.newreleaseSVG {
+
+	background: url('../SVG/newrelease.svg');
+	background-repeat: no-repeat;
+	height: 25px;
+} 
+.downloadsSVG {
+
+	background: url('../SVG/downloads.svg');
+	background-repeat: no-repeat;
+	height: 25px;
+} 
+

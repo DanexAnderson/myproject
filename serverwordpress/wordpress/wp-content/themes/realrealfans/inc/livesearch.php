@@ -37,7 +37,10 @@ while($mainQuery->have_posts()) {
           $hint = get_the_title();
           $link = get_the_permalink();
           
-         echo $hint === "" ? "No Data" : '<li class="list-group-item py-1"><a href='.$link.'>'.$hint.' </a></li>';
+         echo $hint === "" ? "No Data" : '<a class="dropdown-item py-1 list-group-item " href='.$link.'>'.$hint.' </a>';
+       // echo '<input type="button" class="dropdown-item" type="button" value="Test1"/>';
+       
+        
 
          
 

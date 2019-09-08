@@ -1,3 +1,5 @@
+@import url("svg.css");
+
 article.post{
 	border-bottom: #ccc solid 1px;
 	padding-bottom: 20px;
@@ -36,19 +38,12 @@ article.post .meta{
 	overflow:auto;
 }
 
-.marginTop { /* Search DropDown */
+.liveSearchMenu { /* Search DropDown */
 	margin-top: 44px;
 	
 	min-width: 25%;
 	
 }
-
-.searchSVG {
-
-	background: url('../SVG/search-solid.svg');
-	background-repeat: no-repeat;
-	height: 25px;
-} 
 
 
 
@@ -81,5 +76,118 @@ article.post .meta{
 	display: block;
   }   */
 
+/* Triangle on DropDown Menu */
+  .main-navigation a:before {
+    content:"";
+    position: absolute;
+    left : 5px;
+    top: -10px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 10px 10px 10px;
+    border-color: transparent transparent #8b155a46 transparent;
+	z-index:9999;
+	
+}
+.main-navigation a:after {
+    content:"";
+    position: absolute;
+    left: 0px;
+    top: -15px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 15px 15px 15px;
+    border-color: transparent transparent rgba(219, 250, 255, 0.9) transparent;
+    z-index:9998;
+}
 
- 
+.main-navigation {
+
+	background: rgba(219, 250, 255, 0.9);
+	border: 0.5px solid  #8b155a46 !important;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	
+
+}
+
+.dropdown-item {
+
+	color: rgb(77, 15, 62) !important;
+}
+
+/* NavBar DropDown Menu Divider */
+.NavHr {
+	background:   #580d3911 !important;
+	margin-top: -5px;
+	margin-bottom: -5px;
+}
+
+/* Remove Caret(dropdown arrow) from menu items*/
+.dropdown-toggle:after { content: none }
+
+
+@media only screen and (max-width: 767px) {
+	.main-navigation a:before, .main-navigation a:after  {
+		border-width: 0 0px 0px 0px;
+	}
+
+	.liveSearchMenu { /* Search DropDown */
+		margin-top: 0px;
+		
+	}
+
+  }
+
+
+  /* input {
+    background-color:transparent;
+    border: 0px solid;
+    height:30px;
+    width:260px;
+} */
+input:focus, .form-control:focus {
+    outline:none;
+}
+
+/*  Remove Outline from Search Input */
+textarea:focus, 
+textarea.form-control:focus, 
+input.form-control:focus, 
+input[type=text]:focus, 
+input[type=password]:focus, 
+input[type=email]:focus, 
+input[type=number]:focus, 
+[type=text].form-control:focus, 
+[type=password].form-control:focus, 
+[type=email].form-control:focus, 
+[type=tel].form-control:focus, 
+[contenteditable].form-control:focus {
+  box-shadow: inset 0 -1px 0 #ddd;
+}
+
+ .liveSearchMenu .list-group-item {
+
+	background: rgb(255, 255, 255);
+} 
+
+.liveSearchMenu .list-group-item:hover, .liveSearchMenu .list-group-item:focus{
+
+	background: rgba(219, 250, 255);
+}
+
+.liveSearchMenu {
+
+	display: none;
+}
+
+form .searchInput:focus-within .liveSearchMenu {
+
+	display: block;
+}
+
+.searhMenuColor {
+
+	background: rgba(219, 250, 255) !important;
+}
