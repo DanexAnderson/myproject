@@ -40,10 +40,14 @@ article.post .meta{
 
 .liveSearchMenu { /* Search DropDown */
 	margin-top: 44px;
-	
 	min-width: 25%;
 	
 }
+@-moz-document url-prefix() {
+	.liveSearchMenu {
+		margin-top: 90px;
+	 }
+  }
 
 
 
