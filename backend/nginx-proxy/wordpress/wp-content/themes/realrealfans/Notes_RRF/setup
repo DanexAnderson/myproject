@@ -1,0 +1,17 @@
+1. ftp error:
+
+go to wp-config.php file => add; define('FS_METHOD','direct');
+
+
+2. Add Error Log:
+Edit your wp-config.php file and add these lines, just before it says 'stop editing 
+
+ini_set('log_errors',TRUE);
+ini_set('error_reporting', E_ALL);
+ini_set('error_log', dirname(__FILE__) . '/error_log.txt');
+
+
+3. Disable and Enable Apache2
+
+    1. sudo systemctl stop apache2.service
+    ii. sudo systemctl start apache2.service
