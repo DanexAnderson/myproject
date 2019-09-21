@@ -1,4 +1,5 @@
 @import url("svg.css");
+@import url("ekko-lightbox.css");
 
 article.post{
 	border-bottom: #ccc solid 1px;
@@ -195,3 +196,10 @@ form .searchInput:focus-within .liveSearchMenu {
 
 	background: rgba(219, 250, 255) !important;
 }
+
+
+
+
+.row {
+	margin: 5px;
+  }

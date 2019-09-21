@@ -32,6 +32,9 @@ function include_Jquery() {
 
     wp_register_script('jssor_slider', get_template_directory_uri() . '/js/jssor.slider-27.5.0.min.js', '', 1, false );
     wp_enqueue_script( 'jssor_slider' );
+
+    wp_register_script('light_box', get_template_directory_uri() . '/js/ekko-lightbox.min.js', '', 1, true );
+    wp_enqueue_script( 'light_box' );
 }
 
 add_action('wp_enqueue_scripts', 'include_Jquery');

@@ -6,7 +6,7 @@
 </head>
 
 <body> 
-  
+  <!-- ------------- Slide header Banner --------- -->
 <?php include('slideheader.php'); ?>
     
 <nav class="navbar navbar-expand-md navbar-light NavbgColor py-0 mt-md-n1 mt-lg-0 fixed-top py-lg-1">
@@ -104,3 +104,4 @@
 <br/><br/><br/>
 
 <div class="container-fluid pagesize">
+
