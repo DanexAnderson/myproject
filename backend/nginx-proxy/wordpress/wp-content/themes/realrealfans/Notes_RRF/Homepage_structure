@@ -45,3 +45,15 @@ Wordpress ToDo:
 1. Gallery Cusom Post Type:
         a. Gallery 
         b. photo Categories
+
+
+.1 Create Subscriber Gallery:
+
+Gallery Api : 
+
+        .1 Sports => 2. Football .3 => User => .4 title
+
+a) Store to Wp Media files => call post media Api 
+a2) Get Media Api using Post authentication
+b) Add response image Tag to a variable, Add response caption to a variable
+c) Store to Gallery Api => Add variables to content page 

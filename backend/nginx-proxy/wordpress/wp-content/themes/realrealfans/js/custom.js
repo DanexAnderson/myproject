@@ -8,6 +8,17 @@ jQuery('ul.navbar-nav li.dropdown').hover(function() {
   // LightBox 
 
   $(document).on("click", '[data-toggle="lightbox"]', function(event) {
+
+    // 
+
     event.preventDefault();
+
+   // var close = document.createElement("p"); 
+    
     $(this).ekkoLightbox();
+     $(".modal-content").before("<h1 style='margin-top:-30px;margin-right:-15;float:right;position-fixed;color:white;'>X</h1>");
   });
+  
+  
+  
+  

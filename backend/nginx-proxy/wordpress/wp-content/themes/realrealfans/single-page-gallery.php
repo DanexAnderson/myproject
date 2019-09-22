@@ -51,7 +51,7 @@
 
             /*#region responsive code begin*/
 
-            var MAX_WIDTH = 980;
+            var MAX_WIDTH = 1200;
 
             function ScaleSlider() {
                 var containerElement = jssor_1_slider.$Elmt.parentNode;
@@ -90,6 +90,7 @@
             from { transform: rotate(0deg); }
             to { transform: rotate(360deg); }
         }
+
 
                 /*jssor slider bullet skin 111 css*/
         .jssorb111 .i {position:absolute;color:#fff;font-family:"Helvetica neue",Helvetica,Arial,sans-serif;text-align:center;cursor:pointer;z-index:0;}
@@ -131,16 +132,16 @@
 
 <!--  -->
 
-    <div id="jssor_1" class="ml-n3 ml-md-0"style="position:relative;margin:0 auto;top:0px;left:0px;width:980px;height:609px;overflow:hidden;visibility:hidden;">
+    <div id="jssor_1" class="ml-n3 ml-md-auto"style="position:relative;margin:0 auto;top:0px;left:0px;width:980px;height:609px;overflow:hidden;visibility:hidden;">
         <!-- Loading Screen -->
         <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
             <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="<?php bloginfo('template_url');?>/img/spin.svg" />
         </div>
 
         <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:980px;height:480px;overflow:hidden;">
-            <div>
+            <div >
                 <a  href="<?php bloginfo('template_url');?>/img/031.jpg" data-toggle="lightbox" data-gallery="gallery" >
-                    <img data-u="image" src="<?php bloginfo('template_url');?>/img/031.jpg" class="img-fluid"/>
+                    <img data-u="image" src="<?php bloginfo('template_url');?>/img/031.jpg" class="img-fluid BlowUp"/>
                 </a>
                 
                 <div data-u="thumb" >
@@ -273,24 +274,24 @@
     <div class="container">
   <div class="row">
     <a href="https://unsplash.it/1200/768.jpg?image=251" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
-      <img src="https://unsplash.it/600.jpg?image=251" class="img-fluid rounded">
+      <img src="https://unsplash.it/600.jpg?image=251" class=" rounded">
     </a>
     <a href="https://unsplash.it/1200/768.jpg?image=252" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
-      <img src="https://unsplash.it/600.jpg?image=252" class="img-fluid rounded">
+      <img src="https://unsplash.it/600.jpg?image=252" class=" rounded">
     </a>
     <a href="https://unsplash.it/1200/768.jpg?image=253" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
-      <img src="https://unsplash.it/600.jpg?image=253" class="img-fluid rounded">
+      <img src="https://unsplash.it/600.jpg?image=253" class=" rounded">
     </a>
   </div>
   <div class="row">
     <a href="https://unsplash.it/1200/768.jpg?image=254" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
-      <img src="https://unsplash.it/600.jpg?image=254" class="img-fluid rounded">
+      <img src="https://unsplash.it/600.jpg?image=254" class=" rounded">
     </a>
     <a href="https://unsplash.it/1200/768.jpg?image=255" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
-      <img src="https://unsplash.it/600.jpg?image=255" class="img-fluid rounded">
+      <img src="https://unsplash.it/600.jpg?image=255" class=" rounded">
     </a>
     <a href="https://unsplash.it/1200/768.jpg?image=256" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
-      <img src="https://unsplash.it/600.jpg?image=256" class="img-fluid rounded">
+      <img src="https://unsplash.it/600.jpg?image=256" class=" rounded">
     </a>
   </div>
 </div>
