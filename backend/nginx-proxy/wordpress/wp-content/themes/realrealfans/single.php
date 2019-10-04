@@ -22,7 +22,7 @@
 
 											<!-- Gallery -->
 
-<?php include('single-page-gallery.php'); ?>
+<?php include('Single.Page/single-page-gallery.php'); ?>
 
 <!-- -------- -->
 

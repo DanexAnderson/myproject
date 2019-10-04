@@ -3,11 +3,14 @@
 <?php wp_head(); get_header(); ?>
 <!--  -->
 
-<p> Showing search results for <u class="text-primary"><?php the_search_query(); ?></u> </p>
+
 
 <div class=" index ">
 		<div class="row">
 			<div class="col-md-8">
+				
+			<p> Showing search results for <u class="text-primary"><?php the_search_query(); ?></u> </p><br/>
+
 				<div class="panel panel-default">
 					<div class="panel-heading">
 						<h3 class="panel-title"></h3>

@@ -1,0 +1,103 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>
+        Create Post
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content class="ion-padding ">
+  
+   <mat-spinner *ngIf='isloading'></mat-spinner>
+
+    <form [formGroup]="form" (submit)="onPost()" *ngIf='!isloading' >
+  <mat-card class="border shadow-lg">
+
+  
+      <mat-form-field class='w-100'>
+     <input matInput  placeholder="Enter Article Title" formControlName='title' class='bg-light p-3 shadow-sm' />
+      <mat-error *ngIf="form.get('title').invalid && form.get('title').dirty && form.get('title').touched" class="text-danger">Please enter a Title</mat-error>
+    </mat-form-field>
+
+   <mat-form-field class='w-100 mt-5'>         
+     <input matInput  placeholder="Enter Image Caption" formControlName='caption' class='bg-light p-3 shadow-sm'/> <!-- touched: once you enter the field -->
+      <mat-error *ngIf="form.get('caption').invalid && form.get('caption').dirty && form.get('caption').touched" class="text-danger">please enter Image Caption</mat-error> <!-- dirty: once you made changes -->
+    </mat-form-field>
+ 
+   <mat-form-field class='w-100 mt-5'>    
+     <textarea matInput placeholder="Image Description" formControlName='description' class='bg-light p-3 shadow-s' ></textarea> 
+       <!-- touched: once you enter the field -->
+      <mat-error *ngIf="form.get('description').invalid && form.get('description').dirty && form.get('description').touched" class="text-danger">please enter Description</mat-error> <!-- dirty: once you made changes -->
+    </mat-form-field>
+ 
+   <mat-form-field class='w-100 mt-5'>  
+     <textarea matInput placeholder="Article Content" formControlName='content' class='bg-light p-3 shadow-s'></textarea> <!-- touched: once you enter the field -->
+      <mat-error *ngIf="form.get('content').invalid && form.get('content').dirty && form.get('content').touched" class="text-danger">please enter Content</mat-error> <!-- dirty: once you made changes -->
+    </mat-form-field> 
+   <br><br>
+   <div class='d-inline-block'>
+         <div class='d-inline'>
+          <button  mat-stroked-button  type='button' (click)='filepicker.click()'> <b>Pick Image</b></button>
+          <input type='file' class='d-none' (change)="onImagePicked($event)" #filepicker>
+         </div>
+          <div class='d-inline ml-5 ' *ngIf="imagePrev !=='' && imagePrev && form.get('image').valid">
+           <img class='img-thumbnail w-50 h-25' [src]="imagePrev" [alt]='form.value.title'>
+          </div>
+   </div>
+
+  </mat-card><br> <br/>
+
+   <button mat-raised-button color='primary' [disabled]=form.invalid type="submit">Submit</button><br/><br/>
+
+   </form>
+
+   <!-- ------------------------- End Template-Driven From ------------------------ -->
+
+  </ion-content>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ <!--  
+    <div ngModelGroup='userData' #userDataf="ngModelGroup">
+    </div>
+  
+  <div class="form-group">
+      <select mat-input class="form-control" name='third' minlength=1 maxlength=2
+       [ngModel]='third' type='text' #thirdf="ngModel"
+       [ngClass]="{'border border-danger':thirdf.touched && thirdf.invalid, 'form-control':true }" required>
+      <option value=111 >...</option>
+      <option value=1>one</option>
+      <option value=2> two</option>
+      <option value=3>three</option>
+      </select>
+       <mat-error *ngIf="thirdf.invalid" class="text-danger">please Select Third</mat-error>
+    </div>
+
+
+   <button class="btn btn-primary" type='button' (click)="patchFieldViewChild()">Patch Value</button>
+   <br/><br/>
+   <button class="btn btn-primary" type='button' (click)="setFieldsViewChild()">Set Value</button> -->

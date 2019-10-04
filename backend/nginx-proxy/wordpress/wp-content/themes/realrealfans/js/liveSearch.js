@@ -52,10 +52,10 @@ $(document).ready(function () {
 
 
 document.getElementById("navbar-search").addEventListener("keyup", function (event) {
-  var livesearchelem = document.getElementById("livesearch");
-  var childrens = livesearchelem.getElementsByTagName("a"); //Get only hyperlinks
+   this.livesearchelem = document.getElementById("livesearch");
+   this.childrens = this.livesearchelem.getElementsByTagName("a"); //Get only hyperlinks
 
-  var key = (event.charCode) ? event.charCode : ((event.which) ? event.which : event.keyCode);
+  key = (event.charCode) ? event.charCode : ((event.which) ? event.which : event.keyCode);
   var selected = this.selectedResultNumber;
 
   $(document).on('input', '#navbar-search', function () { // On change of input search Term, reset selected.
@@ -64,48 +64,54 @@ document.getElementById("navbar-search").addEventListener("keyup", function (eve
     selected = null;    
   });
 
-  this.select = selected; // Assign selected to Global variable Selected
-
   if (key == 38) { //Arrow up
-    if (childrens.length === 0) {
+    if (this.childrens.length === 0) {
       return;
+    } 
+
+    if (this.selectedResultNumber === 1){ // Return To Search Input Field
+
+            //Restore the previous selected element's style
+            this.childrens[0].classList.remove("searhMenuColor");
+            this.selectedResultNumber = null;
     }
+    else
     if (!selected) { //If 'selectedResultNumber' is undefined
 
-      childrens[childrens.length - 1].className += " searhMenuColor ";
-
+      //return;
+      this.childrens[this.childrens.length - 1].className += " searhMenuColor ";
 
       //Store the selected number into this element
-      this.selectedResultNumber = childrens.length - 1;
+      this.selectedResultNumber = this.childrens.length - 0;
 
     } else if (selected > 1) {
 
       //Restore the previous selected element's style
-      childrens[selected - 1].classList.remove("searhMenuColor");
+      this.childrens[selected - 1].classList.remove("searhMenuColor");
 
       //Set the new selected element's style
-      childrens[selected - 2].className += " searhMenuColor ";
+      this.childrens[selected - 2].className += " searhMenuColor ";
 
       //Decrease the selected number by 1
       this.selectedResultNumber--;
     }
   } else if (key == 40) { //Arrow down
-    if (childrens.length === 0) {
+    if (this.childrens.length === 0) {
       return;
     }
     if (!selected) { //If 'selectedResultNumber' is undefined
 
-      childrens[0].className += " searhMenuColor ";
+    this.childrens[0].className += " searhMenuColor ";
 
       //Store the selected number into this element
       this.selectedResultNumber = 1;
-    } else if (selected < childrens.length) {
-      //Restore the previous selected element's style
+    } else if (selected < this.childrens.length) {
 
-      childrens[selected - 1].classList.remove("searhMenuColor");
+      //Restore the previous selected element's style
+      this.childrens[selected - 1].classList.remove("searhMenuColor");
 
       //Set the new selected element's style
-      childrens[selected].className += " searhMenuColor ";
+      this.childrens[selected].className += " searhMenuColor ";
 
       //Increase the selected number by 1
       this.selectedResultNumber++;
@@ -117,25 +123,16 @@ document.getElementById("navbar-search").addEventListener("keyup", function (eve
   if (searchTerm) {
     showResult(searchTerm.value);
 
-
     searchTerm.addEventListener("keydown", function (event) {
-      var livesearchelem = document.getElementById("livesearch");
-      var childrens = livesearchelem.getElementsByTagName("a"); //Get only hyperlinks
-      // Different Browsers may use different key press events
-      var key = (event.charCode) ? event.charCode : ((event.which) ? event.which : event.keyCode);
 
-      if (key == 13) { //Enter key
-
-        // IF the Menu Option Selected is Null , then let the selected Option be index 0
-        if (!this.select) this.select = 0;
-
-        if (childrens.length === 0) {
-          return;
-        }
+      var key = (event.charCode) ? event.charCode : ((event.which) ? event.which : event.keyCode);      
+  
+      if (key == 13 && this.selectedResultNumber) { //Enter key
+        
+        this.childrens[this.selectedResultNumber-1].focus(); // Focus selected Option for the Click event
 
         //Trigger click event on the selected element
-        childrens[this.select].focus(); // Focus selected Option for the Click event
-        childrens[this.select].click();
+        this.childrens[this.selectedResultNumber-1].click();
       }
 
     });

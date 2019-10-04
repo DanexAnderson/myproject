@@ -1,19 +1,45 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { SingleComponent } from './tech/single/single.component';
+import { LoginComponent } from './auth/login/login.component';
+import { PostComponent } from './post/post/post.component';
+import { CreatePostComponent } from './post/create-post/create-post.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'post',
     pathMatch: 'full'
   },
+  {
+    path: 'single',
+    component: SingleComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
+  },
+  {
+    path: 'posts',
+    component: PostComponent
+  },
+  {
+    path: 'create-post',
+    component: CreatePostComponent
+  },
+/*   {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full'
+  }, */
   {
     path: 'home',
     loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
   },
   {
     path: 'list',
-    loadChildren: () => import('./list/list.module').then(m => m.ListPageModule)
+    // loadChildren: () => import('./list/list.module').then(m => m.ListPageModule)
+    loadChildren: './list/list.module#ListPageModule'
   }
 ];
 

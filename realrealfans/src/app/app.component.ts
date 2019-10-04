@@ -21,6 +21,29 @@ export class AppComponent {
       url: '/list',
       icon: 'list'
     }
+    ,
+    {
+      title: 'Single',
+      url: '/single',
+      icon: 'images'
+    },
+    {
+        title: 'Login',
+        url: '/login',
+        icon: 'unlock'
+    }
+    ,
+    {
+        title: 'Posts',
+        url: '/posts',
+        icon: 'mail'
+    }
+    ,
+    {
+        title: 'Create Post',
+        url: '/create-post',
+        icon: 'create'
+    }
   ];
 
   constructor(

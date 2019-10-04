@@ -34,6 +34,7 @@ $gallery_args = array(
 	'hierarchical' => false,
 	'has_archive' => true,
 	'exclude_from_search' => true,
+	'show_in_rest' => true,
 	'menu_position' => null,
 	'capability_type' => 'post',
 	'supports' => array('title', 'excerpt', 'editor', 'thumbnail'),
@@ -54,6 +55,7 @@ function jss_create_gallery_taxonomies(){
 			'hierarchical'=> true, 
 			'label' => 'Photo Types',
 			'singular_label' => 'Photo Type',
+			'show_in_rest' => true,
 			'rewrite' => true
 		)
 	);	
@@ -112,5 +114,10 @@ function jss_display_post_thumbnail_column($col, $id){
   }
 }
 
+// Author Support 
+function add_author_support_to_posts() {
+	add_post_type_support( 'gallery', 'author' ); 
+ }
+ add_action( 'init', 'add_author_support_to_posts' );
 
 ?>

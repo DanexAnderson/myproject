@@ -41,19 +41,34 @@ Wordpress ToDo:
 
 
 
+        #Gallery:
 
-1. Gallery Cusom Post Type:
-        a. Gallery 
-        b. photo Categories
+happening: 
+           1. Media Library: title, author, description and  caption(#postTitle_postID)
+           2. Post: Title, Author, content, Excerpt
+           3. Request All Images: Football=>Author=>Title == Key(#postTitle_postID)
+
+1) Add unique caption to Media Image 
+2) ReCreate caption variable in WP_Query
+        Media Library WP_Query:
+                'author' => $post->author,
+                'caption' => '#'.$post->title.'_'.$post->id
+
+3) Image upload: Save Post then respond with postTitle and PostID to save images and caption variable to Media Library
 
 
-.1 Create Subscriber Gallery:
+1) upload form: title, caption as query key, description
+2) post to media Api
+3) single.php to display content and images.
+4) get contents from media api using wp_query
 
-Gallery Api : 
+Production:
 
-        .1 Sports => 2. Football .3 => User => .4 title
+1) Post to posts Api first and get response
+2) Create caption key by getting wp post title, author, postId
 
-a) Store to Wp Media files => call post media Api 
-a2) Get Media Api using Post authentication
-b) Add response image Tag to a variable, Add response caption to a variable
-c) Store to Gallery Api => Add variables to content page 
+ToDo :
+
+        Wp_nonce: to form to prevent unauthorized post
+        JWT-Authentication: for all Api request 
+        Angular post to wp api using jwt-Authentication

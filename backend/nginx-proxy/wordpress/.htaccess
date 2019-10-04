@@ -5,6 +5,17 @@ RewriteBase /
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{HTTP:Authorization} ^(.*)
 RewriteRule . /index.php [L]
+RewriteRule ^(.*) - [E=HTTP_AUTHORIZATION:%1]
 </IfModule>
+
+
+<IfModule mod_headers.c>
+    SetEnvIf Origin "http(s)?://(www\.)?(realrealfans.com|localhost:8100|localhost:8200|127.0.0.1)$" AccessControlAllowOrigin=$0
+    Header add Access-Control-Allow-Origin %{AccessControlAllowOrigin}e env=AccessControlAllowOrigin
+    Header merge Vary Origin
+</IfModule>
+
+SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1
 # END WordPress

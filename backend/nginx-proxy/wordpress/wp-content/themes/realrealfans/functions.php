@@ -62,7 +62,41 @@ add_action('wp_enqueue_scripts', 'load_JS');
 
 //----------------------------------------- --------------------------------------------------------------//
 
+// Enable Api Headers
+function my_customize_rest_cors() {
+	remove_filter( 'rest_pre_serve_request', 'rest_send_cors_headers' );
+	add_filter( 'rest_pre_serve_request', function( $value ) {
+		header( 'Access-Control-Allow-Origin: *' );
+        header( 'Access-Control-Allow-Headers: *' );
+		header( 'Access-Control-Allow-Methods: OPTIONS, GET, POST, PUT, PATCH, DELETE' );
+		header( 'Access-Control-Allow-Credentials: true' );
+		header( 'Access-Control-Expose-Headers: Link', false );
+		return $value;
+	} );
+}
+add_action( 'rest_api_init', 'my_customize_rest_cors', 15 );
 
+// ----------------------------------------------------------------------------------------------------- //
+
+
+// Allowed Mime Types 
+function free_wp_tp_enable_extended_upload ( $mime_types =array() ) {
+  
+    // The MIME types listed here will be allowed in the media library.
+    // You can add as many MIME types as you want.
+    $mime_types['jpeg']  = 'image/jpeg';
+    $mime_types['jpe']  = 'image/jpeg';
+    $mime_types['jpg']  = 'image/jpg';
+    $mime_types['png']  = 'image/png';
+    $mime_types['gif']  = 'image/gif';
+   
+    // If you want to forbid specific file types which are otherwise allowed,
+    // specify them here.  You can add as many as possible.
+    unset( $mime_types['bin'] );
+   
+    return $mime_types;
+ }   
+ add_filter('upload_mimes', 'free_wp_tp_enable_extended_upload');
 
 
 /* 

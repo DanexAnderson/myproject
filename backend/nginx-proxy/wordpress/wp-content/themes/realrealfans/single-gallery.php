@@ -1,4 +1,7 @@
-<h3> Hello From Header Slider ! </h3>
+
+<!-- Testing Page for Gallery  -->
+
+<h3> Testing Page Only for Gallery ! </h3>
 
 <?php $query = new WP_Query( array( 'post_type' => 'gallery', 'phototype' =>'banner-slide', 'tax_query' => array( 
                             
