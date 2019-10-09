@@ -52,7 +52,7 @@ onPost() {
   } else {
     return;
   }
- // this.form.reset(); // Remove post data from form fields
+  this.form.reset(); // Remove post data from form fields
 
   this.isloading = false;
 }

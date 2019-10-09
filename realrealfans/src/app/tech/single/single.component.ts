@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
-import {DataService} from '../../post/data.service';
+import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { DataService } from '../../post/data.service';
+import { environment } from 'src/environments/environment';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-single',
@@ -10,15 +12,41 @@ import {DataService} from '../../post/data.service';
 export class SingleComponent implements OnInit {
 
   item: any;
+  dateFormat = environment.dateFormat;
+  @Input()
+  url = 'http://www.realrealfans.com/anime-king/';
+  urlSafe: SafeResourceUrl;
+  isloading = true;
 
-  constructor(private route: ActivatedRoute, public dataService: DataService) { }
+  constructor(private route: ActivatedRoute, public dataService: DataService, private sanitizer: DomSanitizer) { }
 
-  ngOnInit() {
-      // const itemSlug = this.route.snapshot.paramMap.get('slug');
-      const itemSlug = 'anime-king';
-      this.item = this.dataService.getPostBySlug(itemSlug);
-     // console.log(this.item);
-  }
+onLoad() {
+setTimeout( () => {
+
+  const iframe = document.getElementById('SingleFrame');
+
+  iframe.contentWindow.postMessage('daneanderson16realrealfans', '*');
+
+  iframe.style.display = 'block';
+  this.isloading = false;
+  /* const doc = iframe.contentDocument || iframe.contentWindow.document;
+  const el = doc.getElementsById('Navheader');
+  console.log(el); */
+
+
+}, 0.0001);
+}
+
+
+
+ngOnInit() {
+
+  this.urlSafe = this.sanitizer.bypassSecurityTrustResourceUrl(this.url);
+  // const itemSlug = this.route.snapshot.paramMap.get('slug');
+  const itemSlug = 'anime-king';
+  this.item = this.dataService.getPostBySlug(itemSlug);
+  // console.log(this.item);
+}
 
 
 }

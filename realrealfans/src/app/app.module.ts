@@ -24,7 +24,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SingleComponent,
     PostComponent,
     LoginComponent,
-    CreatePostComponent
+    CreatePostComponent,
 
   ],
   entryComponents: [],

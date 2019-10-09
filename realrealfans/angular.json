@@ -43,7 +43,7 @@
                 "input": "./node_modules/bootstrap/dist/css/bootstrap.css"
               }
             ],
-            "scripts": []
+            "scripts": ["http://www.realrealfans.com/wp-content/themes/realrealfans/js/jquery3.4.1.min.js"]
           },
           "configurations": {
             "production": {

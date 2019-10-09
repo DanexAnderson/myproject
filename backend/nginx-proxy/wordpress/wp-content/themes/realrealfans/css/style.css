@@ -203,3 +203,13 @@ form .searchInput:focus-within .liveSearchMenu {
 .row {
 	margin: 5px;
   }
+
+
+  #thumb-nail {
+
+	max-width: 1200px;
+	min-width: 100%;
+	width: 100%;
+	
+
+  }

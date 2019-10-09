@@ -91,7 +91,7 @@ export class DataService {
 
                     mediaData.append('title', formData.caption); // Caption Used in form is set as Title in Media Api
                     // Caption in Media Api is use to create Media Category
-                    mediaData.append('caption', formData.title + this.posts[0].id);
+                    mediaData.append('caption', '#' + formData.title + this.posts[0].id);
                     mediaData.append('description', formData.description);
                     mediaData.append('file', formData.image);  // , formData.title formData.image
                     mediaData.append('status', formData.status);
@@ -109,6 +109,8 @@ export class DataService {
 
                         console.log(this.media[0]);
 
+                       // return this.http.post(URL + 'wp/v2/posts?_embed&status=any&token=' + user.token, postData, { headers });
+
 
                     }
                     );
@@ -119,5 +121,10 @@ export class DataService {
             console.log('No User Data');
             return; }
     }
+
+    getSinglePage() {
+
+}
+
 
 }

@@ -6,7 +6,10 @@
 </head>
 
 <body> 
+
+<div id="NavHeader">
   <!-- ------------- Slide header Banner --------- -->
+
 <?php include('slideheader.php'); ?>
     
 <nav class="navbar navbar-expand-md navbar-light NavbgColor py-0 mt-md-n1 mt-lg-0 fixed-top py-lg-1">
@@ -91,17 +94,14 @@
            <div class=" position-absolute  h-100 liveSearchMenu " id="livesearch" ></div> 
          </div>
             <button type="submit" class="btn btn-outline-none my-0 mt-md-0  d-lg-block searchSVG ">
-           </button>
-
-      
-      
+           </button>     
 
     </form>    
 
-
   </div>
 </nav>
+
+</div>
 <br/><br/>
 
-<!-- <div class="container-fluid pagesize"> -->
 

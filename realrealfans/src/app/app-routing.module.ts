@@ -8,7 +8,7 @@ import { CreatePostComponent } from './post/create-post/create-post.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'post',
+    redirectTo: 'posts',
     pathMatch: 'full'
   },
   {

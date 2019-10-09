@@ -1,16 +1,24 @@
 <ion-header>
     <ion-toolbar>
-      <ion-buttons slot="start">
+      <ion-buttons slot="end">
         <ion-menu-button></ion-menu-button>
       </ion-buttons>
       <ion-title>Posts</ion-title>
     </ion-toolbar>
   </ion-header>
   
-  <ion-content class="ion-padding">
+ 
+  <ion-content  class="ion-padding">
+      <ion-row class="parent">
+          <ion-col size="2" class="ion-align-self-start ion-hide-sm-down">
+            
+           <h1 class="position-fixed"> Start</h1>
+          </ion-col >
 
-      <ion-card *ngFor="let item of items">
-        <ion-img *ngIf="item._embedded['wp:featuredmedia']" [src]="item._embedded['wp:featuredmedia'][0].source_url"></ion-img>
+          <ion-col  size="12" size-md   class="ion-align-self-center ">            
+
+      <ion-card  *ngFor="let item of items">
+        <img class="w-100 h-50" *ngIf="item._embedded['wp:featuredmedia']" [src]="item._embedded['wp:featuredmedia'][0].source_url"/>
         <ion-card-header>
           <ion-card-subtitle>{{ item.date | date:dateFormat }}</ion-card-subtitle>
           <ion-card-title [innerHTML]="item.title.rendered"></ion-card-title>
@@ -29,5 +37,15 @@
         <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data...">
         </ion-infinite-scroll-content>
       </ion-infinite-scroll>
-    
+
+
+
+      Center           
+    </ion-col>
+    <ion-col size="3"  class="ion-align-self-start">
+
+        <h1 class="position-sticky float-right"> Features </h1>
+
+    </ion-col>
+  </ion-row>
     </ion-content>
