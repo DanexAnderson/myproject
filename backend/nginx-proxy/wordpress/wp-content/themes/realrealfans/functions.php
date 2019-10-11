@@ -98,6 +98,57 @@ function free_wp_tp_enable_extended_upload ( $mime_types =array() ) {
  }   
  add_filter('upload_mimes', 'free_wp_tp_enable_extended_upload');
 
+ 
+
+// Remove Wordpress Image Sizes
+ function remove_extra_image_sizes() {
+    foreach ( get_intermediate_image_sizes() as $size ) {
+       //  if ( !in_array( $size, array( 'thumbnail', 'medium', 'medium_large', 'large' ) ) ) {
+            remove_image_size( $size );
+       // }
+    }
+} 
+add_action('init', 'remove_extra_image_sizes');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* 
  function thumbnail_image(){

@@ -95,6 +95,7 @@ export class DataService {
                     mediaData.append('description', formData.description);
                     mediaData.append('file', formData.image);  // , formData.title formData.image
                     mediaData.append('status', formData.status);
+                    mediaData.append('post', this.posts[0].id);
 
                     headers =  headers.append('Accept', 'application/json');
                     headers = headers.append('Content-Disposition', 'attachment; filename=' + formData.image.name);

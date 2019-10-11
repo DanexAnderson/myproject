@@ -130,6 +130,7 @@
     </style>
 
 
+
 <!--  -->
 <!-- class="ml-n3 ml-md-auto" -->
     <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:980px;height:609px;overflow:hidden;visibility:hidden;">
@@ -138,7 +139,8 @@
             <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="<?php bloginfo('template_url');?>/img/spin.svg" />
         </div>
 
-        <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:980px;height:480px;overflow:hidden;">
+        <!--*****************************  Gallery Images **************************************-->
+        <!-- <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:980px;height:480px;overflow:hidden;">
             <div >
                 <a  href="<?php bloginfo('template_url');?>/img/031.jpg" data-toggle="lightbox" data-gallery="gallery" >
                     <img data-u="image" src="<?php bloginfo('template_url');?>/img/031.jpg" class="img-fluid BlowUp"/>
@@ -222,10 +224,11 @@
                 <div class="ti">Slide Description</div>
                 </div>
             </div>
-        </div>
-        <!-- Thumbnail Navigator -->
+        </div> -->
+
+        <!-- Thumbnail Navigator Full&#160;Description&#160;goes&#160;here --> 
         <div data-u="thumbnavigator" class="jssort101" style="position:absolute;left:0px;bottom:-10px;width:980px;height:140px;background-color:#000;" data-autocenter="1" data-scale-bottom="0.75">
-    <div class="text-white float-left ml-4 d-block text-center"> Full Discription goes here </div>
+    <div class="text-white float-left ml-4 d-block text-center"><?php echo str_replace(' ','&#160;','Full Description goes here'); ?> </div>
             <div data-u="slides">
                 <div data-u="prototype" class="p" style="width:190px;height:90;margin-top:-26px;">
                     <div data-u="thumbnailtemplate" class="t" style=""></div>
@@ -236,7 +239,7 @@
                     </svg>
                 </div>
             </div>
-        </div>
+        </div> 
              <!-- Bullet Navigator -->
         <div data-u="navigator" class="jssorb111" style="position:absolute;bottom:100px;right:12px;" data-scale="0.5">
 
@@ -266,6 +269,59 @@
        
     </div>
     <script type="text/javascript">jssor_1_slider_init();</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     <!-- ------------------------------------------------------------------------ -->

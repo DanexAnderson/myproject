@@ -23,16 +23,12 @@ export class SingleComponent implements OnInit {
 onLoad() {
 setTimeout( () => {
 
-  const iframe = document.getElementById('SingleFrame');
+  const iframe = document.getElementById('SingleFrame') as HTMLIFrameElement;
 
-  iframe.contentWindow.postMessage('daneanderson16realrealfans', '*');
+  iframe.contentWindow.postMessage('daneanderson16realrealfans', '*') ;
 
   iframe.style.display = 'block';
   this.isloading = false;
-  /* const doc = iframe.contentDocument || iframe.contentWindow.document;
-  const el = doc.getElementsById('Navheader');
-  console.log(el); */
-
 
 }, 0.0001);
 }

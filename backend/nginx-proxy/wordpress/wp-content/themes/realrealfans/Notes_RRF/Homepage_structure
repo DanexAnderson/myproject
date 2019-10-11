@@ -72,3 +72,27 @@ ToDo :
         Wp_nonce: to form to prevent unauthorized post
         JWT-Authentication: for all Api request 
         Angular post to wp api using jwt-Authentication
+
+
+Update 1: Post Created & Image Uploaded
+
+        Update Post Info
+        1. Have: Post_ID & recreate image Caption key
+        2. WP_Query to get Images from Media Library using recreated caption key
+        3. Assign a feature Image and set status to 'publish' using Post in wp_insert_Post
+        4. display images in Posts.
+
+
+Admin Gallery:
+
+        1. Create New Posts =>  Note Post_ID in URL 
+        2. Create new Gallery => let gallery title = Post_ID && let gallery Excerpt = Post_tilte
+        3. WP_Query Gallery to get images by title
+
+User Gallery:
+
+        1. display if Category is Article
+        2. WP_Query Media Library by caption key
+        3. if exist: loop display images.
+        4. else: Assign Post_Id to variable
+        5. WP_Query Gallery title by Posts_ID and display Images
