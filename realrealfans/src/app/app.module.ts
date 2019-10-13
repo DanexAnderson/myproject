@@ -32,7 +32,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
-    NgbModule.forRoot(),
+    NgbModule,
     ReactiveFormsModule,
     AngularMaterialModule,
     FormsModule,

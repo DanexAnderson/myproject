@@ -94,5 +94,6 @@ User Gallery:
         1. display if Category is Article
         2. WP_Query Media Library by caption key
         3. if exist: loop display images.
-        4. else: Assign Post_Id to variable
-        5. WP_Query Gallery title by Posts_ID and display Images
+        4. else: WP_Query Gallery title by Posts_ID and display Images
+        5. wp_reset_postdata();
+        

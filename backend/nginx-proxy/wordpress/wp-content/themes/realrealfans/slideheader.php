@@ -1,13 +1,13 @@
 
 <!-- --------------------------- Custom Query to Get Banner Images ------------------------ -->
 
-<?php $query = new WP_Query( array( 'post_type' => 'gallery', 'phototype' =>'banner-slide', 'tax_query' => array( 
+<?php $query = new WP_Query( array( 'post_type' => 'gallery', 'phototype' =>'hidden', 'tax_query' => array( 
                             
-                            array(
+/*                             array(
                                 'taxonomy' => 'phototype',   // taxonomy name                                
-                                 'field' => 'banner-slide',           // term_id, slug or name
-                                 'terms' => 'banner-slide',                  // term id, term slug or term name
-                            )
+                                 'field' => 'slide-banner',           // term_id, slug or name
+                                 'terms' => 'slide-banner',                  // term id, term slug or term name
+                            ) */
                                 )
                                      ) ); ?>
 <?php if ( $query->have_posts() ) :
@@ -23,6 +23,7 @@
     $matches = array_reverse($matches);
 
 endwhile; endif; 
+wp_reset_postdata();
 ?>
 
 
@@ -38,16 +39,16 @@ endwhile; endif;
   </ol>
   <div class="carousel-inner "  >
     <div class="carousel-item active" >
-      <img class="d-block w-100 h-25"   src="<?php  echo $matches[0][0]; ?>" alt="First slide">
+      <img class="d-block w-100" style="height: 200px"  src="<?php  echo $matches[0][0]; ?>" alt="First slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100 h-25" src="<?php echo $matches[0][1]; ?>" alt="Second slide">
+      <img class="d-block w-100" style="height: 200px" src="<?php echo $matches[0][1]; ?>" alt="Second slide">
     </div>
     <div class="carousel-item " >
-      <img class="d-block w-100 h-25"   src="<?php  echo $matches[0][2]; ?>" alt="Third slide">
+      <img class="d-block w-100"  style="height: 200px"  src="<?php  echo $matches[0][2]; ?>" alt="Third slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100 h-25" src="<?php echo $matches[0][3]; ?>" alt="Fouth slide">
+      <img class="d-block w-100 " style="height: 200px"   src="<?php echo $matches[0][3]; ?>" alt="Fouth slide">
     </div>
 
   </div>

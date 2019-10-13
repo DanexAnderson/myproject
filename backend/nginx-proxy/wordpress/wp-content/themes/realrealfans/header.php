@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html <?php language_attributes(); ?> >
 <?php wp_head(); ?>
 <head>
@@ -12,7 +13,7 @@
 
 <?php include('slideheader.php'); ?>
     
-<nav class="navbar navbar-expand-md navbar-light NavbgColor py-0 mt-md-n1 mt-lg-0 fixed-top py-lg-1">
+<nav class="navbar navbar-expand-md navbar-light NavbgColor py-0 mt-0 fixed-top py-lg-1">
 <a class="navbar-brand ml-lg-4 my-0 shadow-sm pr-2 pl-2 ml-md-n2"  href="<?php bloginfo('url'); ?>"> <?php bloginfo('name'); ?></a>
   <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

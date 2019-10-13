@@ -38,7 +38,7 @@ export class DataService {
                     .pipe(map(this.processPostData, this));
             } else {
 
-                return this.http.get(URL + 'wp/v2/posts?_embed', { observe: 'response' })
+                 return this.http.get(URL + 'wp/v2/posts?_embed', { observe: 'response' })
                     .pipe(map(this.processPostData, this));
             }
         }

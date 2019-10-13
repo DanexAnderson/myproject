@@ -1,5 +1,6 @@
 @import url("svg.css");
 @import url("ekko-lightbox.css");
+@import url("gallerySlide.css");
 
 article.post{
 	border-bottom: #ccc solid 1px;

@@ -53,6 +53,9 @@ function load_JS()
     wp_register_script('liveSearch_js', get_template_directory_uri() . '/js/liveSearch.js', '', 1, true );
     wp_enqueue_script( 'liveSearch_js' );
 
+    wp_register_script('gallerySlide_js', get_template_directory_uri() . '/js/gallerySlide.js', '', 1, false );
+    wp_enqueue_script( 'gallerySlide_js' );
+
 
 }
 
@@ -101,15 +104,22 @@ function free_wp_tp_enable_extended_upload ( $mime_types =array() ) {
  
 
 // Remove Wordpress Image Sizes
- function remove_extra_image_sizes() {
-    foreach ( get_intermediate_image_sizes() as $size ) {
-       //  if ( !in_array( $size, array( 'thumbnail', 'medium', 'medium_large', 'large' ) ) ) {
-            remove_image_size( $size );
-       // }
-    }
-} 
-add_action('init', 'remove_extra_image_sizes');
+add_filter( 'intermediate_image_sizes_advanced', 'prefix_remove_default_images' );
+// Remove default image sizes here. 
+function prefix_remove_default_images( $sizes ) {
+ unset( $sizes['small']); // 150px
+ unset( $sizes['medium']); // 300px
+ unset( $sizes['large']); // 1024px
+ unset( $sizes['medium_large']); // 768px
+ return $sizes;
+}
 
+
+// add_theme_support( 'right-size');
+
+// add_image_size( 'right-size', 1024, 500, false );
+
+// update_option( 'medium_large_size_h', 500 );
 
 
 

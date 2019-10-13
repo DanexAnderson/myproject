@@ -7,8 +7,8 @@
                             
                             array(
                                 'taxonomy' => 'phototype',   // taxonomy name                                
-                                 'field' => 'banner-slide',           // term_id, slug or name
-                                 'terms' => 'banner-slide',                  // term id, term slug or term name
+                                 'field' => 'slide-banner',           // term_id, slug or name
+                                 'terms' => 'slide-banner',                  // term id, term slug or term name
                             )
                                 )
                                      ) ); ?>
