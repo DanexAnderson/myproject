@@ -12,7 +12,7 @@ jQuery('ul.navbar-nav li.dropdown').hover(function() {
     event.preventDefault();
     
     $(this).ekkoLightbox();
-
+      
     // Add closing X symbol to Image Gallery LightBox
      $(".modal-content").before("<h2 style='margin-top:-30px;margin-right:-15;float:right;position-fixed;color:white;'>X</h2>");
   });

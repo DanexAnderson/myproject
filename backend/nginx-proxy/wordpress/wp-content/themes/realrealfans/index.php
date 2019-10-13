@@ -16,9 +16,9 @@
 								<article class="post">
 									<div class="row">
 										<?php if(has_post_thumbnail()): ?>
-											<div class="col-md-3">
+											<div class="col-md-3 ">
 												<div class="post-thumbnail">
-												<?php the_post_thumbnail(); ?>
+												<?php the_post_thumbnail('full', array("class" => "rounded")); ?>
 												</div>
 											</div>
 											<div class="col-md-9">

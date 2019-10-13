@@ -74,21 +74,6 @@ ToDo :
         Angular post to wp api using jwt-Authentication
 
 
-Update 1: Post Created & Image Uploaded
-
-        Update Post Info
-        1. Have: Post_ID & recreate image Caption key
-        2. WP_Query to get Images from Media Library using recreated caption key
-        3. Assign a feature Image and set status to 'publish' using Post in wp_insert_Post
-        4. display images in Posts.
-
-
-Admin Gallery:
-
-        1. Create New Posts =>  Note Post_ID in URL 
-        2. Create new Gallery => let gallery title = Post_ID && let gallery Excerpt = Post_tilte
-        3. WP_Query Gallery to get images by title
-
 User Gallery:
 
         1. display if Category is Article
@@ -97,3 +82,18 @@ User Gallery:
         4. else: WP_Query Gallery title by Posts_ID and display Images
         5. wp_reset_postdata();
         
+Update Post Info:
+
+        1. Http post request to Wp posts api
+        2. set featured Image and status to 'publish'
+
+Custom Api for Posts plus Gallery: 
+
+Multiple Image Uploads:
+
+
+Angular Resize Images:
+
+Angular single Page Slug: 
+        1. get slug from posts on front page. store it in a data property
+        2. On click image set slug variable in DataService 

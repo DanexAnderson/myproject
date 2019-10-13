@@ -31,7 +31,7 @@
 
 				<!-------------------------------- Photo Gallery ----------------------->
 
-								<?php if (in_category('Article')) :
+								<?php if (in_category('Article') or has_term('article', 'phototype')) :
 								
 								include('Single.Page/single-page-gallery.php');
 
