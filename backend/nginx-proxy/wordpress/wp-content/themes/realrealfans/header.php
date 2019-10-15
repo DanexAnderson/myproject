@@ -24,13 +24,13 @@
 
    <ul class="navbar-nav  ml-auto mr-auto ">
     <!--   <li class="nav-item active ">
-        <a class="nav-link NavtextColor" href="#">Sports <span class="sr-only">(current)</span></a>
+        <a class="nav-link " href="#">Sports <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active ml-md-1 ml-lg-4">
-        <a class="nav-link NavtextColor" href="#">Entertainment</a>
+        <a class="nav-link " href="#">Entertainment</a>
       </li> -->
       <li class="nav-item active dropdown ">
-        <a class="nav-link dropdown-toggle NavtextColor border shadow my-2 py-0 rounded text-center " href="#" id="navbarDropdown" role="button"
+        <a class="nav-link dropdown-toggle  border shadow my-2 py-0 rounded text-center " href="#" id="navbarDropdown" role="button"
          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
          Sports
         </a>
@@ -45,7 +45,7 @@
         </div>
       </li>
       <li class="nav-item active dropdown ml-md-1 ml-lg-4  ">
-        <a class="nav-link dropdown-toggle NavtextColor border shadow my-2 py-0 rounded text-center " href="#" id="navbarDropdown" role="button"
+        <a class="nav-link dropdown-toggle  border shadow my-2 py-0 rounded text-center " href="#" id="navbarDropdown" role="button"
          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
          Entertainment
         </a>
@@ -60,7 +60,7 @@
         </div>
       </li>
       <li class="nav-item active dropdown ml-md-1 ml-lg-4 ">
-        <a class="nav-link dropdown-toggle NavtextColor border shadow my-2 py-0 text-center rounded" href="#" id="navbarDropdown" role="button"
+        <a class="nav-link dropdown-toggle  border shadow my-2 py-0 text-center rounded" href="#" id="navbarDropdown" role="button"
          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Technology
         </a>

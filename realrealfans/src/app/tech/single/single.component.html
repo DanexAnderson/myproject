@@ -9,12 +9,12 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="ion-padding2 overflow-hidden overlay-hidden">
-<div class="parent2">
+<ion-content class="overflow-hidden overlay-hidden">
+  <div class="parent">
 
 
 <iframe width="100%" height="100%" frameBorder="0" [src]="urlSafe" (load)="onLoad()" id="SingleFrame"
-webkitallowfullscreen mozallowfullscreen allowfullscreen> </iframe>
+> </iframe>
 <div class="col-3 mx-auto mt-5">
 <mat-spinner *ngIf="isloading" class="mt-5"></mat-spinner>
 </div>

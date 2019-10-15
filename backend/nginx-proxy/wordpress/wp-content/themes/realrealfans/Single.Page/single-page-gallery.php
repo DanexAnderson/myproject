@@ -18,7 +18,7 @@ if ($media_query) :
 
 
     <!-- class="ml-n3 ml-md-auto" -->
-    <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:980px;height:609px;overflow:hidden;visibility:hidden;">
+    <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:980px;height:616px;overflow:hidden;visibility:hidden;margin-bottom:5%;">
         <!-- Loading Screen -->
         <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
             <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="<?php bloginfo('template_url'); ?>/img/spin.svg" />
@@ -45,14 +45,16 @@ if ($media_query) :
             <a href="<?php echo wp_get_attachment_url($post->ID); ?>" data-toggle="lightbox" data-gallery="gallery">
                 <?php echo wp_get_attachment_image($post->ID, 'full', "", array(
                             "class" => "img-fluid ",
-                            "data-u" => "image"
+                            "data-u" => "image",
+                            "style" => "border-top: 7px solid white;"
                         )); ?>
             </a>
 
             <div data-u="thumb">
                 <?php echo wp_get_attachment_image($post->ID, "full", "", array(
                             "class" => "i",
-                            "data-u" => 'thumb'
+                            "data-u" => 'thumb',
+                            "style" => 'width:200px; height:90px;'
                         )); ?>
                 <div class="ti">Slide Description</div>
             </div>
@@ -67,10 +69,10 @@ if ($media_query) :
 </div>
 
         <!-- Thumbnail Navigator Full&#160;Description&#160;goes&#160;here -->
-        <div data-u="thumbnavigator" class="jssort101" style="position:absolute;left:0px;bottom:-10px;width:980px;height:140px;background-color:#000;" data-autocenter="1" data-scale-bottom="0.75">
+        <div data-u="thumbnavigator"  class="jssort101 " style="height:130px;position:absolute;left:0px;bottom:0px;width:980px;background-color:#000;" data-autocenter="1" data-scale-bottom="0.75">
             <div class="text-white float-left ml-4 d-block text-center"><?php echo str_replace(' ', '&#160;', 'Full Description goes here'); ?> </div>
             <div data-u="slides">
-                <div data-u="prototype" class="p" style="width:190px;height:90;margin-top:-26px;">
+                <div data-u="prototype" class="p" style="height:125px!important;width:190px;margin-top:0px;">
                     <div data-u="thumbnailtemplate" class="t"></div>
                     <svg viewbox="0 0 16000 16000" class="cv">
                         <!-- <circle class="a" cx="8000" cy="8000" r="3238.1"></circle> -->
@@ -81,7 +83,7 @@ if ($media_query) :
             </div>
         </div>
         <!-- Bullet Navigator -->
-        <div data-u="navigator" class="jssorb111" style="position:absolute;bottom:100px;right:12px;" data-scale="0.5">
+        <div data-u="navigator" class="jssorb111" style="position:absolute;bottom:102px;right:12px;" data-scale="0.7">
 
 
             <div data-u="prototype" class="i" style="width:24px;height:24px;font-size:12px;line-height:24px;">

@@ -1,6 +1,7 @@
 @import url("svg.css");
 @import url("ekko-lightbox.css");
 @import url("gallerySlide.css");
+@import url("single.css");
 
 article.post{
 	border-bottom: #ccc solid 1px;
@@ -58,7 +59,7 @@ article.post .meta{
 	background: rgba(219, 250, 255, 0.8);
 }
 
-.NavTextColor {
+a.nav-link {
 
 	color: rgb(77, 15, 62) !important;
 	text-shadow:
@@ -205,12 +206,3 @@ form .searchInput:focus-within .liveSearchMenu {
 	margin: 5px;
   }
 
-
-  #thumb-nail {
-
-	max-width: 1200px;
-	min-width: 100%;
-	width: 100%;
-	
-
-  }

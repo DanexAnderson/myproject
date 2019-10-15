@@ -47,11 +47,12 @@ function scrollFunction() {
       // Data sent with postMessage is stored in event.data: 
       window.document.getElementById("NavHeader").style.display = "none";
 
-      var hidebarP = window.document.getElementById("parent").style;
-      hidebarP.overflow='hidden';
+
+/*       var hidebarP = window.document.getElementById("parent").style;
+      hidebarP.overflow ='hidden';
       hidebarP.width = '100%';
       hidebarP.height ='100%';
-      hidebarP.marginLeft = '10px'
+      hidebarP.marginLeft = '10px';
 
       var hidebarC = window.document.getElementById("child").style;
       hidebarC.overflowY ='scroll';
@@ -59,14 +60,12 @@ function scrollFunction() {
       hidebarC.height ='100%';
       hidebarC.paddingRight = '15px';
       hidebarC.boxSizing = 'content-box';
-      hidebarC.marginTop = '-15px'
-      
+      hidebarC.marginTop = '-5px';    
 
+       window.document.body.style.overflow = 'hidden'; */
 
-      window.document.body.style.overflow = 'hidden';
+       
 
-
-      // alert(event.data);
   } else {
       // The data was NOT sent from your site! 
       // Be careful! Do not use it. This else branch is

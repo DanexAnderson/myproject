@@ -14,7 +14,7 @@ export class SingleComponent implements OnInit {
   item: any;
   dateFormat = environment.dateFormat;
   @Input()
-  url = 'http://www.realrealfans.com/anime-king/';
+  url = 'http://www.realrealfans.com/test-luffy/';
   urlSafe: SafeResourceUrl;
   isloading = true;
 
