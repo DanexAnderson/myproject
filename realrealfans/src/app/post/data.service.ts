@@ -70,24 +70,46 @@ export class DataService {
     // Subscribe to CreatePost Response Data
     createPost(formData): any {
         const user = this.authService.getUser();
-        const postData = {
+
+
+/*         const postData = {
             title: formData.title,
             content: formData.content,
             status: 'draft'
-        };
+        }; */
+
 
         if (user) {
 
             let headers = new HttpHeaders();
             headers = headers.set('Authorization', 'Bearer ' + user.token);
-            return this.http.post(URL + 'wp/v2/posts?_embed&status=any&token=' + user.token, postData, { headers })
+            headers =  headers.append('Accept', 'application/json');
+            headers = headers.append('Content-Disposition', 'attachment; filename=' + formData.image.name);
+            headers =  headers.append('Cache-Control', 'no-cache');
+
+            const mediaData = new FormData();
+            mediaData.append( 'post_title', formData.title),
+            mediaData.append('content', formData.content),
+            mediaData.append('post_status', 'draft'),
+            mediaData.append('media_title', formData.caption); // Caption Used in form is set as Title in Media Api
+            mediaData.append('description', formData.description);
+            mediaData.append('file', formData.image);  // , formData.title formData.image
+            mediaData.append('media_status', formData.status);
+
+
+            return this.http.post(URL + 'rrf/v1/createpost?_embed&status=any&token=' + user.token, mediaData, { headers })
+            .subscribe( post => {
+
+                console.log(post);
+            });
+            return this.http.post(URL + 'wp/v2/posts?_embed&status=any&token=' + user.token, 'postData', { headers })
                 .subscribe( initPost => {
 
                     this.posts.push(initPost); // Must at Response to a Global Variable or Interface
                    // console.log( this.posts[0]);
 
 
-                    const mediaData = new FormData();
+                   // const mediaData = new FormData();
 
                     mediaData.append('title', formData.caption); // Caption Used in form is set as Title in Media Api
                     // Caption in Media Api is use to create Media Category
@@ -97,9 +119,7 @@ export class DataService {
                     mediaData.append('status', formData.status);
                     mediaData.append('post', this.posts[0].id);
 
-                    headers =  headers.append('Accept', 'application/json');
-                    headers = headers.append('Content-Disposition', 'attachment; filename=' + formData.image.name);
-                    headers =  headers.append('Cache-Control', 'no-cache');
+
 
                     console.log(headers);
 

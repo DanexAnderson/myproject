@@ -56,7 +56,7 @@ if ($media_query) :
                             "data-u" => 'thumb',
                             "style" => 'width:200px; height:90px;'
                         )); ?>
-                <div class="ti">Slide Description</div>
+                <!-- <div class="ti">Slide Description</div> -->
             </div>
         </div>
 
@@ -68,9 +68,9 @@ if ($media_query) :
 
 </div>
 
-        <!-- Thumbnail Navigator Full&#160;Description&#160;goes&#160;here -->
+        <!-- Thumbnail Navigator -->
         <div data-u="thumbnavigator"  class="jssort101 " style="height:130px;position:absolute;left:0px;bottom:0px;width:980px;background-color:#000;" data-autocenter="1" data-scale-bottom="0.75">
-            <div class="text-white float-left ml-4 d-block text-center"><?php echo str_replace(' ', '&#160;', 'Full Description goes here'); ?> </div>
+            <div class="text-white float-left d-inline-block text-center d-inline-block" style="width:100%; height:20px;z-index:1000;position:absolute;"><?php echo str_replace(' ', '&#160;', ' Full Description goes here all the time what u say about my mama?'); ?> </div>
             <div data-u="slides">
                 <div data-u="prototype" class="p" style="height:125px!important;width:190px;margin-top:0px;">
                     <div data-u="thumbnailtemplate" class="t"></div>

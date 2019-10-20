@@ -2,7 +2,8 @@
 iframe, #SingleFrame {
     overflow: hidden !important;
     --overflow: hidden !important;
-    display: none;
-     width: 103.5%; 
+     display: none;
+     width: 103.5%;
+     position: fixed;
      
 }

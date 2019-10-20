@@ -84,3 +84,4 @@ function wpb_modify_search_query( $query ) {
   }
 }
 add_action( 'pre_get_posts', 'wpb_modify_search_query' );
+

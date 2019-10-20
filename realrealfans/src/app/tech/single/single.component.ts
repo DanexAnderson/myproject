@@ -21,7 +21,6 @@ export class SingleComponent implements OnInit {
   constructor(private route: ActivatedRoute, public dataService: DataService, private sanitizer: DomSanitizer) { }
 
 onLoad() {
-setTimeout( () => {
 
   const iframe = document.getElementById('SingleFrame') as HTMLIFrameElement;
 
@@ -30,7 +29,6 @@ setTimeout( () => {
   iframe.style.display = 'block';
   this.isloading = false;
 
-}, 0.0001);
 }
 
 

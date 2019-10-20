@@ -8,15 +8,20 @@ if (typeof(control.value) === 'string') {
 }
 const file = control.value as File;
 const fileReader = new FileReader();
-const fileOb = Observable.create((observer: Observer<{[Key: string]: any}>) => {
+const fileOb = new Observable((observer: Observer<{[Key: string]: any}>) => {
   fileReader.addEventListener('loadend', (e) => {
                             // fileReader.result | e.target[0]
     const arr = new Uint8Array(fileReader.result as any).subarray(0, 4);
     let header = '';
     let isValid = false;
-    for (let i = 0; i < arr.length; i++) {
-      header += arr[i].toString(16);
+
+    for (const head of arr) {
+      header += head.toString(16);
     }
+
+/*     for (let i = 0; i < arr.length; i++) {
+      header += arr[i].toString(16);
+    } */
     switch (header) {
       case '89504e47':
         isValid = true;
@@ -43,9 +48,9 @@ const fileOb = Observable.create((observer: Observer<{[Key: string]: any}>) => {
     } else {
       observer.next({ invalidMimeType: true });
     }
-      observer.complete();
+    observer.complete();
   });
   fileReader.readAsArrayBuffer(file);
 });
-    return fileOb;
+return fileOb;
 };

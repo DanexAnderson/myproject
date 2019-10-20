@@ -37,8 +37,8 @@ Wordpress ToDo:
 6) Create Footer, add Social Media links fixed to the Right of each page 
 7) Add login/register to Nav
 8) *** Add Redirects for Nav Menu ***
-9) Add Comments 
-
+9) Add Comments: sent email after Comment.
+10) Add Likes 
 
 
         #Gallery:
@@ -91,6 +91,44 @@ Custom Api for Posts plus Gallery:
 
 Multiple Image Uploads:
 
+        For Article:
+
+        1) Create Template form to loop images using formBuilder.
+        2) Add Index number to input field "formControlName" as file+Index 
+        3) Add Index number to img ID as prevImage+index 
+        4) Add Index to Div container ID as Images+index 
+        5) Add delete icon to div container with click event ID = index
+        6) Remove inner-HTML of Div container by setting it to empty string 
+        7) Remove image from form array => removeAt(index: number): void
+        8) Add description and title input field to image Div containerIon-reorder, 
+        9) ion-reorder-group, sort reorder index within form array  
+        10) Add a content textarea at the end 
+        11) Send data to DataService => title: this.form.value.titleArr, content: this.form.value.content
+               description: this.form.value.descriptionArr, images: this.form.value.imagesArr, 
+        12) Create new FormData: loop thru and Array push description, title and images
+                formData.append('file[]', images);
+        
+        For Tech Solution:
+
+        1) Loop create title, description base on image amount container Div
+        2) Add Plus button.
+        3) Array push title, description and image to form builder array
+        4) create Div container with title, description and image 
+
+        
+        
+
+template: `
+    <button (click)="onClick($event)" id="test">Click</button>
+  `
+})
+export class AppComponent {
+  onClick(event) {
+    var target = event.target || event.srcElement || event.currentTarget;
+    var idAttr = target.attributes.id;
+    var value = idAttr.nodeValue;
+  }
+}
 
 Angular Resize Images:
 

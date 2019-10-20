@@ -52,7 +52,7 @@ onPost() {
   } else {
     return;
   }
-  this.form.reset(); // Remove post data from form fields
+ // this.form.reset(); // Remove post data from form fields
 
   this.isloading = false;
 }
@@ -68,7 +68,7 @@ onImagePicked(event: Event) {
   };
   reader.readAsDataURL(file);
 
-  console.log(this.form.value.image);
+  // console.log(this.form.value.image);
 }
 
 
@@ -81,13 +81,13 @@ ngOnInit() {
     }); */
   this.form = new FormGroup({
     title: new FormControl
-    (null, {validators: [Validators.required, Validators.minLength(2)], updateOn: 'blur'}),
+    ('title', {validators: [Validators.required, Validators.minLength(2)], updateOn: 'blur'}),
     content: new FormControl
-    (null, {validators: [Validators.required, Validators.minLength(2)]}),
+    ('content', {validators: [Validators.required, Validators.minLength(2)]}),
     caption: new FormControl
-    (null, {validators: [Validators.required, Validators.minLength(2)], updateOn: 'blur'}),
+    ('caption', {validators: [Validators.required, Validators.minLength(2)], updateOn: 'blur'}),
     description: new FormControl
-    (null, {validators: [Validators.required, Validators.minLength(2)]}),
+    ('description', {validators: [Validators.required, Validators.minLength(2)]}),
     image: new FormControl
     (null, {validators: [Validators.required], asyncValidators: [mimeType]})
   });

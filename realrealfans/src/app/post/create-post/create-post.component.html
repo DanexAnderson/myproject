@@ -10,7 +10,7 @@
   </ion-header>
   
   <ion-content class="ion-padding ">
-  
+  <div class="parent mt-2">
    <mat-spinner *ngIf='isloading'></mat-spinner>
 
     <form [formGroup]="form" (submit)="onPost()" *ngIf='!isloading' >
@@ -58,7 +58,7 @@
    </form>
 
    <!-- ------------------------- End Template-Driven From ------------------------ -->
-
+  </div>
   </ion-content>
 
 

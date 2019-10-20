@@ -2,6 +2,7 @@
 
 require_once('inc/gallery.php');
 require_once('inc/livesearch.php');
+require_once('inc/createPostApi.php');
 
 function load_styleCSS()
 {

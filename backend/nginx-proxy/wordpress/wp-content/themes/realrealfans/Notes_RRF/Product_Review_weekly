@@ -1,0 +1,101 @@
+RealRealFans Website: Main idea => Sell other people's products.
+    `                   offer discount coupons to use link.. must use the link.
+
+    Market Facts:
+
+    1. 3.5 billion internet users
+    2. 50% uses mobile phones to browse
+    3. 50% Teenagers 
+    4. Ecommerce is the major Seller.
+    5. Asian is the biggest consumer with over 2 billion users.
+
+
+    idea: Asian text to speech:
+
+        a) translate text to korian or japanese
+        b) use google text to speech reader.
+
+
+Website Focus on User Passion.. What are you fanatic about? 
+Keep viewer retension by placing related media in their site.
+Email them about posted updates they have faned. or reviewed recent. 
+
+
+Google Alerts to similar post, website and blogs
+add links to my website of similar content in the comments 
+
+
+Use Google keywords planner and google trends to find out most searched keywords per month.
+    1. Google trends. Menu => trending searches. 
+Create blogs and articles base on these most searched terms.
+Attach to existing articles in the comments sections.
+Make youtube videos and the topic.
+
+Add Affiliate Links base on content being provided
+
+
+Does server location affect results speed and accessibility?
+
+    1. Host website in same country as visitors
+    2. Use Content Delivery Networks.
+        A) Photon by Jetpack for wordpress 
+        B) Cloudfare
+    3. 3 servers: USA, UK, South Korea. GCP, Azure uk south, AWS
+    
+
+
+                Target Markets:
+    
+ 
+
+    Language:
+
+                1. English                  => USA , UK, Canada, Austrailia
+                2. Korean
+                3. japanese
+                4. Indonesian
+                5. French
+                6. German
+                7. Italian 
+                8. Spanish                  => Mexico, Spain
+                9. Hindi               
+                0. Portuguese              => Brazil
+
+var language = navigator.languages && navigator.languages[0] || // Chrome / Firefox
+               navigator.language ||   // All browsers
+               navigator.userLanguage; // IE <= 10
+
+console.log(language);
+
+<?php
+function get_browser_language( $available = [], $default = 'en' ) {
+	if ( isset( $_SERVER[ 'HTTP_ACCEPT_LANGUAGE' ] ) ) {
+		$langs = explode( ',', $_SERVER['HTTP_ACCEPT_LANGUAGE'] );
+    if ( empty( $available ) ) {
+      return $langs[ 0 ];
+    }
+		foreach ( $langs as $lang ){
+			$lang = substr( $lang, 0, 2 );
+			if( in_array( $lang, $available ) ) {
+				return $lang;
+			}
+		}
+	}
+	return $default;
+}
+<?
+
+A) Store Title and Content of varying lanauages in same database fields 
+B) Add a <p> tag with an ID proporty in both Title and Content
+C) Display default lanauage: with Z-index of 1
+D) Check browser to see User Language.. 
+E) Swap z-index -2 of User Language with default lanauage by ID
+
+
+
+ Google text To Speech ?
+
+
+
+
+

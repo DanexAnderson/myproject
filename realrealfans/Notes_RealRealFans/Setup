@@ -18,6 +18,8 @@ Environment Setup:
 
         vi. npm install -g typings
 
+        vii. Lauch android studio capacitor  "linuxAndroidStudioPath": "/opt/android-studio/bin/studio.sh"
+
 2) Installed Angular and Ionic 
         1. Create Ionic App 
         2. Install Material Design
@@ -57,6 +59,9 @@ Environment Setup:
 
         1. Signup and Login 
         2. Add Display Image 
+
+
+11. Configure capacitor config file to allow cors.. set it to localhost:8997
 
 
 
