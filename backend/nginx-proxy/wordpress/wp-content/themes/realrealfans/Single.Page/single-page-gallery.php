@@ -37,7 +37,7 @@ if ($media_query) :
         foreach ($media_query->posts as $post) {
 
 
-            echo wp_get_attachment_image($post->ID, 'full');
+          //  echo wp_get_attachment_image($post->ID, 'full');
             ?>
 
         <!-- --------------------- Display Article Images ------------------- -->

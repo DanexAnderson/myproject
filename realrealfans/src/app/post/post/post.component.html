@@ -15,24 +15,25 @@
            <h1 class="position-fixed"> Start</h1>
           </ion-col >
 
-          <ion-col  size="12" size-md   class="ion-align-self-center ">            
+          <ion-col  size="12" size-md   class="ion-align-self-center contentColor">            
 
-      <ion-card  *ngFor="let item of items">
-        <img class="w-100 h-50" *ngIf="item._embedded['wp:featuredmedia']" [src]="item._embedded['wp:featuredmedia'][0].source_url"/>
+      <ion-card  *ngFor="let item of items" class="mb-4">
+        <!-- <img class="w-100 h-50" *ngIf="item._embedded['wp:featuredmedia']" [src]="item._embedded['wp:featuredmedia'][0].source_url"/> -->
+        <img class="w-100 h-50" *ngIf="item.featured_img_src" [src]="item.featured_img_src"/>
         <ion-card-header>
           <ion-card-subtitle>{{ item.date | date:dateFormat }}</ion-card-subtitle>
-          <ion-card-title [innerHTML]="item.title.rendered"></ion-card-title>
+          <ion-card-title [innerHTML]="item.title"></ion-card-title>
         </ion-card-header>
         <ion-card-content>
-          <div [innerHTML]="item.excerpt.rendered"></div>
+          <div [innerHTML]="item.excerpt"></div>
           <div>
-            <ion-button href="/{{item.slug}}" routerDirection="root" color="primary" size="small">Read more...</ion-button>
+            <button  mat-button >Read more...</button>
           </div>
-          Posted in W<br/>
-          Tagged X, Y, Z
+        <br>
         </ion-card-content>
+        
       </ion-card>
-    
+    <br>
       <ion-infinite-scroll threshold="100px" (ionInfinite)="getMorePosts($event)" [disabled]="infiniteScrollDisabled()">
         <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data...">
         </ion-infinite-scroll-content>

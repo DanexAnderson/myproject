@@ -3,6 +3,7 @@
 require_once('inc/gallery.php');
 require_once('inc/livesearch.php');
 require_once('inc/createPostApi.php');
+require_once('inc/getPostApi.php');
 
 function load_styleCSS()
 {
@@ -116,17 +117,33 @@ function prefix_remove_default_images( $sizes ) {
 }
 
 
-// add_theme_support( 'right-size');
+// Stop Empty Search Query 
+add_action( 'pre_get_posts', function ( $q )
+{
+    if(    //!is_admin() && // Only target the front end
+     $q->is_main_query() // Only target the main query
+        && $q->is_search() // Only target the search page
+    ) {
+        // Get the search terms        
+        $search_terms = $q->get( 's' );
 
-// add_image_size( 'right-size', 1024, 500, false );
+        // Set a 404 if s is empty
+        if ( empty(trim($search_terms)) ) {
+            
+            add_action( 'wp', function () use ( $q )
+            {
+                header('Location: ' . $_SERVER['HTTP_REFERER']);
+                // header('Location: '.$_SERVER['PHP_SELF']);
+                 die;
+                $q->set_404();
 
-// update_option( 'medium_large_size_h', 500 );
-
-
-
-
-
-
+                status_header(404);
+                nocache_headers();
+                
+            });
+        }
+    }
+});
 
 
 
@@ -168,6 +185,13 @@ function prefix_remove_default_images( $sizes ) {
 	add_theme_support('post-thumbnails');
 }
 add_action('after_setup_theme', 'thumbnail_image');  */
+
+
+// add_theme_support( 'right-size');
+
+// add_image_size( 'right-size', 1024, 500, false );
+
+// update_option( 'medium_large_size_h', 500 );
 
 
 ?>

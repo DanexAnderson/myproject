@@ -19,7 +19,13 @@ function searchResults($data)
 
     'post_type' =>  array('post', 'page', 'gallery'),  // Query entity
     's' => sanitize_text_field($data['q']), // search key 
-    'posts_per_page' => 10
+    'posts_per_page' => 10,
+    'tax_query' =>  array( array(
+      'taxonomy' => 'phototype',
+      'field' => 'name',
+      'terms' => 'hidden',
+      'operator' => 'NOT IN',
+  ))
   
   ));
 
@@ -69,7 +75,7 @@ add_filter('register_post_type_args', function ($args, $post_type) {
 wp_reset_postdata();
 
 // Remove Galley Taxonomy Phototype "Hidden" from being Search header slides
-function wpb_modify_search_query( $query ) {
+function modify_search_query( $query ) {
   global $wp_the_query;
   if( $query === $wp_the_query && $query->is_search() ) {
       $tax_query = array(
@@ -83,5 +89,5 @@ function wpb_modify_search_query( $query ) {
       $query->set( 'tax_query', $tax_query );
   }
 }
-add_action( 'pre_get_posts', 'wpb_modify_search_query' );
+add_action( 'pre_get_posts', 'modify_search_query' );
 

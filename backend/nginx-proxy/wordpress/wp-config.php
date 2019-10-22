@@ -60,6 +60,7 @@ define( 'NONCE_SALT',       'a01b55765e8d1d137d0d33025df3ccd3ca13802a');
 /**   JWT Authentication   */
 define('JWT_AUTH_SECRET_KEY', 'DaneAnderson16');
 define('JWT_AUTH_CORS_ENABLE', true);
+define('FS_METHOD','direct');
 // define('ALLOW_UNFILTERED_UPLOADS', true);
 
 

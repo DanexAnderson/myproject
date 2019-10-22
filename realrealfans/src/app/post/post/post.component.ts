@@ -22,6 +22,7 @@ export class PostComponent implements OnInit {
       console.log('> HomePage.ngOnInit');
       this.dataService.getPosts().subscribe((data: any[]) => {
           this.items = data;
+          // console.log(this.items);
       });
   }
 

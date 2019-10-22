@@ -33,13 +33,18 @@ export class DataService {
         } else {
             const user = this.authService.getUser();
             if (user) {
-                return this.http.get(URL + 'wp/v2/posts?_embed&status=any&token=' + user.token,
-                    { observe: 'response', headers: { Authorization: 'Bearer ' + user.token } })
-                    .pipe(map(this.processPostData, this));
+                return this.http.get(URL + 'rrf/v1/getposts?status=any&token=' + user.token,
+                { observe: 'response', headers: { Authorization: 'Bearer ' + user.token } })
+                .pipe(map(
+                    res => { console.log(res); } ));
+               // return this.http.get(URL + 'wp/v2/posts?_embed&status=any&token=' + user.token,
+               // { observe: 'response', headers: { Authorization: 'Bearer ' + user.token } })
+                 //   .pipe(map(this.processPostData, this));
             } else {
 
-                 return this.http.get(URL + 'wp/v2/posts?_embed', { observe: 'response' })
-                    .pipe(map(this.processPostData, this));
+                 return this.http.get(URL + 'rrf/v1/getposts/', { observe: 'response' })
+               //  return this.http.get(URL + 'wp/v2/posts?_embed', { observe: 'response' })
+                 .pipe( map(this.processPostData, this));
             }
         }
     }
@@ -47,17 +52,20 @@ export class DataService {
      * Gets the next page of posts
      */
     getMorePosts(): any {
+        return;
         this.page++;
-        return this.http.get(URL + 'wp/v2/posts?_embed&page=' + this.page, { observe: 'response' })
+        return this.http.get(URL + 'rrf/v1/getposts?_embed&page=' + this.page, { observe: 'response' })
+       // return this.http.get(URL + 'wp/v2/posts?_embed&page=' + this.page, { observe: 'response' })
             .pipe(map(this.processPostData, this));
     }
     // A place for post-processing, before making the fetched data available to view.
     processPostData(resp: HttpResponse<any[]>) {
-        this.totalPages = +resp.headers.get('X-WP-TotalPages'); // unary (+) operator casts the string to a number
-        resp.body.forEach((item: any) => {
+         console.log(resp);
+         this.totalPages = +resp.headers.get('X-WP-TotalPages'); // unary (+) operator casts the string to a number
+         resp.body.forEach((item: any) => {
             this.items.push(item);
         });
-        return this.items;
+         return this.items;
     }
     getPostBySlug(slug): any {
 

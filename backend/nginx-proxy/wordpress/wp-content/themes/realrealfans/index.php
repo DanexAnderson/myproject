@@ -12,6 +12,11 @@
 					</div>
 					<div class="panel-body">
 						<?php if(have_posts()): ?>
+						
+<?php // the query to set the posts per page to 2
+$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+$args = array('posts_per_page' => 10, 'paged' => $paged );
+query_posts($args); ?>
 							<?php while(have_posts()) : the_post(); ?>
 								<article class="post">
 									<div class="row">
@@ -70,6 +75,14 @@
 									</div>
 								</article>
 							<?php endwhile; ?>
+<!-- pagination -->
+<?php next_posts_link(); ?>
+<?php previous_posts_link(); ?>
+<?php else : ?>
+<!-- No posts found -->
+
+
+
 						<?php endif; ?>
 					</div>
 				</div>

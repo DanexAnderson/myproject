@@ -1,0 +1,29 @@
+.pagination .page-numbers {
+    background: rgba(188, 223, 255, 0.8);
+    color: blue;
+    display: block;
+    width: auto;
+    float: left;
+    margin: 0px 4px 0px 0;
+     padding: 1px 5px 1px 5px; 
+    text-decoration: none;
+    border-radius: 40px;
+    font-size: 90%;
+    
+ }
+
+ .pagination {
+     float: right;
+ }
+  
+ .pagination .page-numbers:hover {
+    background: rgba(84, 147, 230);
+    color: #fff;
+    text-decoration: none;
+ }
+  
+ .pagination .current {
+    background: rgba(0, 68, 255, 0.8);
+    color: #fff;
+    /* padding: 15px 18px 14px 18px; */
+ }

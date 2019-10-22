@@ -29,14 +29,14 @@ Change Categories style in class-wp-widget-Categories.php..
 
 Wordpress ToDo: 
 
-1) Create live Search update and Add Search icon ^^^
+1) Create live Search update and Add Search icon ^^^^^
 2) Add Dynamic Banners                            ^^^^^^
 3) Menu hover items bootstrap drown menus with animations ^^^^^
 4) image gallery for single page, Popup to skip through images ^^^^^
 5) Add Sidebar widget
 6) Create Footer, add Social Media links fixed to the Right of each page 
 7) Add login/register to Nav
-8) *** Add Redirects for Nav Menu ***
+8) Add Redirects for Nav Menu ^^^^^^^^
 9) Add Comments: sent email after Comment.
 10) Add Likes 
 
@@ -87,7 +87,8 @@ Update Post Info:
         1. Http post request to Wp posts api
         2. set featured Image and status to 'publish'
 
-Custom Api for Posts plus Gallery: 
+Custom Api for Posts plus Gallery: ^^^^^^
+
 
 Multiple Image Uploads:
 
@@ -117,7 +118,7 @@ Multiple Image Uploads:
 
         
         
-
+// Get ID for Element that was clicked on.
 template: `
     <button (click)="onClick($event)" id="test">Click</button>
   `
@@ -133,5 +134,6 @@ export class AppComponent {
 Angular Resize Images:
 
 Angular single Page Slug: 
-        1. get slug from posts on front page. store it in a data property
-        2. On click image set slug variable in DataService 
+        1. get slug from posts on front page, stored in a data property
+        2. On click image set slug variable in DataService.
+        3. In Single page Component retrieve slug from DataService.

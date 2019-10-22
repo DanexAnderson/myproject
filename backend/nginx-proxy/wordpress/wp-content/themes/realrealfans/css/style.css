@@ -2,6 +2,7 @@
 @import url("ekko-lightbox.css");
 @import url("gallerySlide.css");
 @import url("single.css");
+@import url("search.css");
 
 article.post{
 	border-bottom: #ccc solid 1px;

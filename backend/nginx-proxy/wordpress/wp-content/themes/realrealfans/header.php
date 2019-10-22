@@ -35,13 +35,13 @@
          Sports
         </a>
         <div class="dropdown-menu shadow-lg rounded border main-navigation py-0" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item py-0 my-2 " href="#"><div class=" soccerSVG "> <span class="ml-4 pl-3"> Football</span></div></a>
+          <a class="dropdown-item py-0 my-2 " href="<?php bloginfo('url'); ?>/sports/soccor"><div class=" soccerSVG "> <span class="ml-4 pl-3"> Soccor</span></div></a>
           <hr class="NavHr"/>
-          <a class="dropdown-item my-2" href="#"><div class=" footballSVG "> <span class="ml-4 pl-3">American Football</span></div></a>
+          <a class="dropdown-item my-2" href="<?php bloginfo('url'); ?>/sports/football"><div class=" footballSVG "> <span class="ml-4 pl-3">American Football</span></div></a>
           <hr class="NavHr"/>
-          <a class="dropdown-item my-2" href="#"><div class=" basketballSVG "> <span class="ml-4 pl-3">BasketBall</span></div></a>
+          <a class="dropdown-item my-2" href="<?php bloginfo('url'); ?>/sports/basketball"><div class=" basketballSVG "> <span class="ml-4 pl-3">BasketBall</span></div></a>
           <hr class="NavHr"/>
-          <a class="dropdown-item my-2" href="#"><div class=" sportsSVG "> <span class="ml-4 pl-3">Other Sports</span></div></a>
+          <a class="dropdown-item my-2" href="<?php bloginfo('url'); ?>/sports/sports"><div class=" sportsSVG "> <span class="ml-4 pl-3">Other Sports</span></div></a>
         </div>
       </li>
       <li class="nav-item active dropdown ml-md-1 ml-lg-4  ">
@@ -50,13 +50,13 @@
          Entertainment
         </a>
         <div class="dropdown-menu shadow-lg rounded border main-navigation py-0" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item py-0 my-2" href="#"><div class=" musicSVG "> <span class="ml-4 pl-3">Music</span></div></a>
+          <a class="dropdown-item py-0 my-2" href="<?php bloginfo('url'); ?>/ent/music"><div class=" musicSVG "> <span class="ml-4 pl-3">Music</span></div></a>
           <hr class="NavHr"/>
-          <a class="dropdown-item my-2" href="#"><div class=" movieSVG "> <span class="ml-4 pl-3">Movies</span></div></a>
+          <a class="dropdown-item my-2" href="<?php bloginfo('url'); ?>/ent/movies"><div class=" movieSVG "> <span class="ml-4 pl-3">Movies</span></div></a>
           <hr class="NavHr"/>
-          <a class="dropdown-item my-2" href="#"><div class=" tvSVG "> <span class="ml-4 pl-3">TV Series</span></div></a>
+          <a class="dropdown-item my-2" href="<?php bloginfo('url'); ?>/ent/tv-series"><div class=" tvSVG "> <span class="ml-4 pl-3">TV Series</span></div></a>
           <hr class="NavHr"/>
-          <a class="dropdown-item my-2" href="#"><div class=" animeSVG "> <span class="ml-4 pl-3">Anime</span></div></a>
+          <a class="dropdown-item my-2" href="<?php bloginfo('url'); ?>/ent/anime"><div class=" animeSVG "> <span class="ml-4 pl-3">Anime</span></div></a>
         </div>
       </li>
       <li class="nav-item active dropdown ml-md-1 ml-lg-4 ">
@@ -65,13 +65,13 @@
           Technology
         </a>
         <div class="dropdown-menu shadow-lg rounded border main-navigation py-0" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item py-0 my-2" href="#"><div class=" newreleaseSVG "> <span class="ml-4 pl-3">New Releases</span></div></a>
+          <a class="dropdown-item py-0 my-2" href="<?php bloginfo('url'); ?>/tech/new-releases"><div class=" newreleaseSVG "> <span class="ml-4 pl-3">New Releases</span></div></a>
           <hr class="NavHr"/>
-          <a class="dropdown-item my-2" href="#"><div class=" fixSVG "> <span class="ml-4 pl-3">Tech Fix</span></div></a>
+          <a class="dropdown-item my-2" href="<?php bloginfo('url'); ?>/tech/tech-fix"><div class=" fixSVG "> <span class="ml-4 pl-3">Tech Fix</span></div></a>
           <hr class="NavHr"/>
-          <a class="dropdown-item my-2" href="#"><div class=" downloadsSVG "> <span class="ml-4 pl-3">Downloads</span></div></a>
+          <a class="dropdown-item my-2" href="<?php bloginfo('url'); ?>/tech/downloads"><div class=" downloadsSVG "> <span class="ml-4 pl-3">Downloads</span></div></a>
           <hr class="NavHr"/>
-          <a class="dropdown-item my-2" href="#"><div class=" qaSVG "> <span class="ml-4 pl-3">Q & A</span></div></a>
+          <a class="dropdown-item my-2" href="<?php bloginfo('url'); ?>/tech/qna"><div class=" qaSVG "> <span class="ml-4 pl-3">Q & A</span></div></a>
         </div>
       </li>
  
@@ -80,7 +80,7 @@
 <!-------------------------- Search Bar ------------------------------->
 
 
-    <form method="get" id="searchForm" class="form-inline my-0 my-md-1 my-lg-0 ml-md-1 ml-lg-auto mr-lg-auto shadow border rounded " role="search" 
+    <form method="get" id="searchForm" class="form-inline my-0 my-md-1 my-lg-0 ml-md-1 ml-lg-auto mr-lg-auto shadow border rounded " role="search" onsubmit="return validateForm()"
     action="<?php echo esc_url(home_url('/')); ?>">
 
     <label for="navbar-search" class="sr-only"><?php _e('Search', 'textdomain'); ?></label>
@@ -88,16 +88,24 @@
 	       <div class="form-group mr-3 mr-md-0 searchInput">
            
              <input type="text"  class="form-control  ml-2 ml-md-auto mr-lg-1 mt-3 mt-md-0 " name="s"  placeholder="Search"
-              id="navbar-search" value="" >
+              id="navbar-search" value="">
               <!-- onkeyup="showResult(this.value)" -->
 
              <!-- DropDown Live Search Menu Results -->
            <div class=" position-absolute  h-100 liveSearchMenu " id="livesearch" ></div> 
          </div>
             <button type="submit" class="btn btn-outline-none my-0 mt-md-0  d-lg-block searchSVG ">
-           </button>     
-
+           </button>   
+           
+             <!-- JS Empty Search Validation-->
+    <script>
+      function validateForm() {
+      var x = document.getElementById('navbar-search').value;
+      if (!x || x.trim() == ''){ return false; }
+      }
+    </script>
     </form>    
+
 
   </div>
 </nav>

@@ -17,6 +17,25 @@
 					</div>
 					<div class="panel-body">
 						<?php if(have_posts()): ?>
+
+						<?php/*  // the query to set the posts per page to 2
+$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+$args = array('posts_per_page' => 2, 'paged' => $paged );
+query_posts($args);  */?>
+
+<?php
+// Protect against arbitrary paged values
+$paged = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1;
+ 
+$args = array(
+    'post_type' => array( 'post', 'gallery' ),
+    'post_status'=>'publish',
+    'posts_per_page' => 1,
+    'paged' => $paged,
+);
+ 
+$the_query = new WP_Query($args);
+?>
 							<?php while(have_posts()) : the_post(); ?>
 								<article class="post">
 									<div class="row">
@@ -75,6 +94,20 @@
 									</div>
 								</article>
 							<?php endwhile; ?>
+
+							<!-- pagination -->
+<div class="pagination">
+        <?php
+        echo paginate_links( array(
+            'format'  => 'page/%#%',
+            'current' => $paged,
+            'total'   => $the_query->max_num_pages,
+            'mid_size'        => 2,
+            'prev_text'       => __('&laquo; Prev Page'),
+            'next_text'       => __('Next Page &raquo;')
+        ) );
+        ?>
+    </div>
 						<?php endif; ?>
 					</div>
 				</div>
