@@ -38,7 +38,7 @@ function getPosts( $request ) {
 
         $posts_data[] = (object) array( 
             'id' => $id, 
-            'author' => $post->post_author,
+            'author' => get_the_author_meta('display_name',$post->post_author),
             'slug' => $post->post_name, 
             'type' => $post->post_type,
             'title' => $post->post_title,

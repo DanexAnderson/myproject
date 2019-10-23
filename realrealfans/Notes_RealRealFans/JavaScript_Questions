@@ -1,0 +1,30 @@
+
+    JavaScript Need to Know:
+
+    JavaScript Array Operators: 
+
+1) arr.filters(function(item)) - returns an array of matching values
+2) arr.Maps(function(item)) - contructs a new array
+3) arr.Find(function(item)) - get only the first matching element 
+4) arr.forEach(function(item)) - loop thru an array 
+5) arr.some.(function(item))  - some elements in array has a condition
+6) arr.every.(function(item)) - every element in array has a condition
+7) Reduce.(function(firstElement, EveryNextElement)) - An Operator on array elements
+8) arr.Includes(string)
+9) arr1.concat(arr2) - joint 2 are more arrays into one 
+10) arr.Join - turn two are more arrays into a string
+11) Array.from(string) - creates an array from a string
+12) arr.slice(int indexStartLeft, int indexStartRight) - select elements from an array
+13) arr.shift() - Permanently Removes first element of array, returns value of removed element
+14) arr.splice(int startIndex, int AmountTobeRemoved, string, string) - Permanently add/remove array elements 
+15) arr.unshift(string, string ) - add elements to front of array
+16) arr.sort(), arr.reverse()
+17) arr.keys() - return an array of keys
+
+    JavaScript Strings 
+
+1) Replace 
+2) Substr
+3) search() - search for a value within an array and returns it location 
+4) spilt 
+5) match - for regex 

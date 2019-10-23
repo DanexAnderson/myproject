@@ -1,0 +1,48 @@
+    PHP Need to Know:
+
+ Array Operations:
+
+1) array_change_key_case($array,CASE_LOWER)
+2) array_diff($a1,$a2) - returns the difference between 2 arrays as an array
+3) array_filter($a1,"$string") - returns array of keyWord string
+4) array_intersect($a1,$a2) - returns matching array
+5) array_keys($a), array_key_exists("key",$array) - returns all keys, if key exist in array
+6) array_map("myfunction",$a) - returns an array of different structure 
+7) array_merge($a1,$a2) - joins 2 or more arrays 
+8) array_replace($a1,$a2), array_replace_recursive() - replace array values
+9) array_search("word",$a) - search an array for key word 
+10) array_shift($a) - Permanently Removes first element of array, returns value of removed element
+11) array_slice($a,int amountOfIndex,int amountOfIndex) - remove indexs starting from index Zero
+12) array_multisort($a1,SORT_ASC,$a2,SORT_DESC) - Sort an Array 
+13) array_reverse($a) - Reverse an array 
+14) array_splice($a1,int startIndex, int amountToReplaced ,$a2) - Permanently replace 
+15) array_unique($a) - Permanently removes duplicate indexs
+16) arsort($a), asort() - sort a Named array in desc and Asc order 
+17) compact('stringVariableName', 'stringVariableName') - create array using string variables
+18) count($cars) - returns total elements within an Array
+19) array_unshift($a,"blue") - Add element to front of Array
+20)  current(), end(), next(), prev(), reset() - Array Traversal 
+
+
+
+
+String Operations: 
+
+1) strlen ($string) - string lenght 
+2) str_word_count($string) - counts the number of words in a paragrah 
+3) strrev($string) - string reverse 
+4) strpos($string, 'key') - string position
+5) str_replace ('search', 'replace', $string)
+6) explode(" ", $string) - breaks a string into an array 
+7) implode($string=array($string, $string)) - joins an array into a string
+8) htmlspecialchars($str) -  stop html code in string from executing 
+9) similar_text($string,$string) - returns amount of similarity 
+10) strcasecmp(), strcmp() - string compare case-insensitive and case sensitive 
+11) str_split($string) - breaks a single string into an array 
+12) strstr($string,"word") - finds and returns all occurance of a string inside another string
+13) substr($string,int start,int end) - sub string
+14) substr_count($string, 'word') - the amount of time a sub string occurs in another string
+15) strtolower($string) -	Converts a string to lowercase letters
+
+
+
