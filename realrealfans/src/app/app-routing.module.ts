@@ -4,6 +4,7 @@ import { SingleComponent } from './tech/single/single.component';
 import { LoginComponent } from './auth/login/login.component';
 import { PostComponent } from './post/post/post.component';
 import { CreatePostComponent } from './post/create-post/create-post.component';
+import { CreateArticleComponent } from './post/create-article/create-article.component';
 
 const routes: Routes = [
   {
@@ -27,19 +28,23 @@ const routes: Routes = [
     path: 'create-post',
     component: CreatePostComponent
   },
-/*   {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
-  }, */
+  {
+    path: 'create-article',
+    component: CreateArticleComponent
+  },
+  /*   {
+      path: '',
+      redirectTo: 'home',
+      pathMatch: 'full'
+    }, */
   {
     path: 'home',
     loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
   },
   {
-    path: 'list',
-    // loadChildren: () => import('./list/list.module').then(m => m.ListPageModule)
-    loadChildren: './list/list.module#ListPageModule'
+    path: 'jsquestion',
+    loadChildren: () => import('./list/list.module').then(m => m.ListPageModule)
+
   }
 ];
 
@@ -49,4 +54,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

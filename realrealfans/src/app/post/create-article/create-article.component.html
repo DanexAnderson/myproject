@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Create Article
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding ">
+  <div class="parent mt-2">
+
+    create-article works!
+    <form [formGroup]="form">
+      <!--class = custom-file-input -->
+      <input type="file" class="form-control" id="files" multiple (change)="detectFiles($event)"
+        accept="image/jpeg,image/jpg,image/x-png,image/png">
+      <!--  -->
+
+      <div class="images-preview mt-2" *ngIf="photoArr.length">
+        <div formArrayName="photos">
+          <div *ngFor="let photo of photos.controls; let i = index;">
+            <div [id]="i" [formGroupName]="i">
+              <input type="text" placeholder="Title" formControlName="title">
+              <img [src]="photo.value.url" class="card-img-top w-50 h-25" w alt="Image Preview">
+
+              <input type="text" placeholder="Caption" formControlName="caption">
+              <input type="text" placeholder="Description" formControlName="description">
+              <!-- {{ photo.url}} -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </form>
+
+
+  </div>
+</ion-content>

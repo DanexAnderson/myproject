@@ -17,6 +17,7 @@ import { PostComponent } from './post/post/post.component';
 import { CreatePostComponent } from './post/create-post/create-post.component';
 import { AngularMaterialModule } from './angular-material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CreateArticleComponent } from './post/create-article/create-article.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     PostComponent,
     LoginComponent,
     CreatePostComponent,
+    CreateArticleComponent
 
   ],
   entryComponents: [],
@@ -46,4 +48,4 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

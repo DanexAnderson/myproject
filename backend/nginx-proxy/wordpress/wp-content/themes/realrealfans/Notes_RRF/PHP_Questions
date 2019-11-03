@@ -2,14 +2,14 @@
 
  Array Operations:
 
-1) array_change_key_case($array,CASE_LOWER)
+1) array_change_key_case($array,CASE_LOWER) - change text case of array keys
 2) array_diff($a1,$a2) - returns the difference between 2 arrays as an array
 3) array_filter($a1,"$string") - returns array of keyWord string
 4) array_intersect($a1,$a2) - returns matching array
 5) array_keys($a), array_key_exists("key",$array) - returns all keys, if key exist in array
 6) array_map("myfunction",$a) - returns an array of different structure 
 7) array_merge($a1,$a2) - joins 2 or more arrays 
-8) array_replace($a1,$a2), array_replace_recursive() - replace array values
+8) array_replace($arr,$arrReplace), array_replace_recursive() - replace array values
 9) array_search("word",$a) - search an array for key word 
 10) array_shift($a) - Permanently Removes first element of array, returns value of removed element
 11) array_slice($a,int amountOfIndex,int amountOfIndex) - remove indexs starting from index Zero
@@ -21,7 +21,7 @@
 17) compact('stringVariableName', 'stringVariableName') - create array using string variables
 18) count($cars) - returns total elements within an Array
 19) array_unshift($a,"blue") - Add element to front of Array
-20)  current(), end(), next(), prev(), reset() - Array Traversal 
+20) current(), end(), next(), prev(), reset() - Array Traversal 
 
 
 

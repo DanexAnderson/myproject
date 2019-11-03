@@ -17,8 +17,8 @@ export class AppComponent {
       icon: 'home'
     },
     {
-      title: 'List',
-      url: '/list',
+      title: 'JS Questions',
+      url: '/jsquestion',
       icon: 'list'
     }
     ,
@@ -28,21 +28,27 @@ export class AppComponent {
       icon: 'images'
     },
     {
-        title: 'Login',
-        url: '/login',
-        icon: 'unlock'
+      title: 'Login',
+      url: '/login',
+      icon: 'unlock'
     }
     ,
     {
-        title: 'Posts',
-        url: '/posts',
-        icon: 'mail'
+      title: 'Posts',
+      url: '/posts',
+      icon: 'mail'
     }
     ,
     {
-        title: 'Create Post',
-        url: '/create-post',
-        icon: 'create'
+      title: 'Create Aritcle',
+      url: '/create-article',
+      icon: 'list-box'
+    }
+    ,
+    {
+      title: 'Create Post',
+      url: '/create-post',
+      icon: 'create'
     }
   ];
 
