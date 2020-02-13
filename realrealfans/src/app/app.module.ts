@@ -19,6 +19,8 @@ import { AngularMaterialModule } from './angular-material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CreateArticleComponent } from './post/create-article/create-article.component';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +41,9 @@ import { CreateArticleComponent } from './post/create-article/create-article.com
     AngularMaterialModule,
     FormsModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+
+
   ],
   providers: [
     StatusBar,

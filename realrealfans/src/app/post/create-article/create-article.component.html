@@ -11,31 +11,87 @@
 
 <ion-content class="ion-padding ">
   <div class="parent mt-2">
+    <h4 class="text-center text-primary">Create Article</h4>
+    <form [formGroup]="form" (submit)="onPost()" *ngIf="!isloading">
+      <mat-card class="border shadow col-lg-10  p-lg-5 container-fluid">
+        <!--class = custom-file-input  form-control -->
 
-    create-article works!
-    <form [formGroup]="form">
-      <!--class = custom-file-input -->
-      <input type="file" class="form-control" id="files" multiple (change)="detectFiles($event)"
-        accept="image/jpeg,image/jpg,image/x-png,image/png">
-      <!--  -->
+        <button mat-stroked-button type="button" (click)="filepicker.click()">
+          <b>Select Images </b>
+        </button>
+        <!-- <input type='file' class='d-none' (change)="onImagePicked($event)" #filepicker> -->
 
-      <div class="images-preview mt-2" *ngIf="photoArr.length">
-        <div formArrayName="photos">
-          <div *ngFor="let photo of photos.controls; let i = index;">
-            <div [id]="i" [formGroupName]="i">
-              <input type="text" placeholder="Title" formControlName="title">
-              <img [src]="photo.value.url" class="card-img-top w-50 h-25" w alt="Image Preview">
+        <span class=" w-75">
+          <input hidden type="file" class="w-75 custom-file-input form-control float-right mr-5" id="files"
+            height="400px !important" multiple (change)="detectFiles($event)"
+            accept="image/jpeg,image/jpg,image/x-png,image/png" #filepicker />
+        </span>
 
-              <input type="text" placeholder="Caption" formControlName="caption">
-              <input type="text" placeholder="Description" formControlName="description">
-              <!-- {{ photo.url}} -->
+        <div class="w-100 mt-5">
+          <input placeholder="Enter Article Title" formControlName="atitle"
+            class="bg-light p-3 shadow-sm form-control" />
+          <mat-error *ngIf="form.get('atitle').invalid && form.get('atitle').dirty" class="text-danger">Please enter a
+            Title
+          </mat-error>
+        </div>
+
+        <div class="images-preview mt-2" *ngIf="photos.controls.length">
+          <div formArrayName="photos">
+            <div *ngFor="let photo of photos.controls; let i = index">
+              <div class="card shadow-sm border mt-5" [id]="i" [formGroupName]="i">
+                <div class="w-100 ">
+                  <input placeholder="Enter Article Title" formControlName="title"
+                    class="bg-light p-3 shadow-sm form-control" />
+                  <mat-error *ngIf="photo.invalid && photo.get('title').dirty" class="text-danger">Please enter a Title
+                  </mat-error>
+                </div>
+
+                <img [src]="photo.value.url" class="card-img-top w-25 h-25 mt-3" w alt="Image Preview" />
+
+                <!-- <div class="w-100 mt-3">
+                  <input placeholder="Enter Image Caption" formControlName="caption"
+                    class="bg-light p-3 shadow-sm form-control" />
+                  <mat-error *ngIf="photo.invalid && photo.get('caption').dirty && photo.touched" class="text-danger">
+                    please enter Image Caption</mat-error>
+                </div> -->
+
+                <div class="w-100 mt-3">
+                  <textarea placeholder="Description" style="min-height: 150px;" formControlName="description"
+                    class="bg-light p-3 shadow-s form-control "></textarea>
+                  <!-- touched: once you enter the field -->
+                  <mat-error *ngIf="
+                      photo.get('description').invalid && photo.get('description').dirty && photo.get('description').touched
+                    " class="text-danger">please enter description</mat-error>
+                  <!-- dirty: once you made changes -->
+                </div>
+
+                <!-- {{ photo.url}} -->
+
+
+              </div>
+              <hr style="border: 0.5px solid rgba(128, 128, 128, 0.3);" />
             </div>
           </div>
         </div>
-      </div>
 
+        <div class="w-100 mt-3">
+          <textarea placeholder="Article Content" style="min-height: 200px;" formControlName="content"
+            class="bg-light p-3 shadow-s form-control "></textarea>
+          <!-- touched: once you enter the field -->
+          <mat-error *ngIf="
+              form.get('content').invalid && form.get('content').dirty && form.get('content').touched
+            " class="text-danger">please enter Content</mat-error>
+          <!-- dirty: once you made changes -->
+        </div>
+
+        <br />
+        <br />
+        <div class="position-relative w-100 pb-5">
+          <button mat-raised-button color="primary" class=" float-right" [disabled]="form.invalid" type="submit">
+            Submit
+          </button>
+        </div>
+      </mat-card>
     </form>
-
-
   </div>
 </ion-content>
